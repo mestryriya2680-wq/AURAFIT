@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraFit | AuraPicks Details</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fce4ec,#e8eafc,#dff5ff);
+    color:#29243a;
+    min-height:100vh;
+}
+
+nav{
+    background:rgba(255,255,255,0.9);
+    padding:20px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    box-shadow:0 5px 20px #00000010;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+    color:#8c4da8;
+}
+
+nav a{
+    text-decoration:none;
+    color:#302a3d;
+    font-weight:600;
+    margin:0 12px;
+}
+
+nav a:hover{
+    color:#a34dbb;
+}
+
+.heading{
+    text-align:center;
+    padding:35px 15px 20px;
+}
+
+.heading h1{
+    font-size:35px;
+    color:#74458e;
+}
+
+.heading p{
+    color:#716b7b;
+    margin-top:8px;
+}
+
+.container{
+    max-width:1150px;
+    margin:25px auto;
+    padding:20px;
+}
+
+.details{
+    background:rgba(255,255,255,0.88);
+    border-radius:25px;
+    padding:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    box-shadow:0 15px 45px #60436c18;
+}
+
+.image-box{
+    background:linear-gradient(135deg,#f7dcec,#dfe8ff);
+    border-radius:20px;
+    overflow:hidden;
+    min-height:400px;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    min-height:400px;
+    object-fit:cover;
+    display:block;
+}
+
+.info{
+    padding:15px 5px;
+}
+
+.tag{
+    display:inline-block;
+    background:#f4e4fa;
+    color:#874c9d;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.info h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.price{
+    font-size:29px;
+    font-weight:800;
+    color:#8b4caa;
+    margin:18px 0;
+}
+
+.old-price{
+    font-size:17px;
+    color:#999;
+    text-decoration:line-through;
+    margin-left:8px;
+}
+
+.description{
+    color:#696473;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.info h3{
+    margin:20px 0 10px;
+}
+
+.sizes{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.size{
+    border:1px solid #d5c7df;
+    background:white;
+    padding:10px 17px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.size.active{
+    background:#8753a4;
+    color:white;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:15px 0;
+}
+
+.quantity button{
+    width:35px;
+    height:35px;
+    border:0;
+    background:#eee0f5;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.actions{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.actions button{
+    flex:1;
+    min-width:130px;
+    padding:15px;
+    border:0;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.add{
+    background:#f2e9f7;
+    color:#70458a;
+}
+
+.buy{
+    background:linear-gradient(100deg,#bd55b6,#347edb);
+    color:white;
+}
+
+.actions button:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+
+.features{
+    margin-top:25px;
+    padding:20px;
+    background:#faf6ff;
+    border-radius:15px;
+    line-height:2;
+    color:#5c5367;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#716b7b;
+}
+
+@media(max-width:750px){
+    .details{
+        grid-template-columns:1fr;
+    }
+
+    .image-box,.image-box img{
+        min-height:320px;
+    }
+
+    .info h2{
+        font-size:26px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">AuraFit ✦</div>
+    <div>
+        <a href="home.html">Home</a>
+        <a href="women.html">Women</a>
+        <a href="men.html">Men</a>
+        <a href="kids.html">Kids</a>
+        <a href="aurapicks.html">AuraPicks</a>
+          <a href="style-studio.html">AuraPicks</a>
+    </div>
+</nav>
+
+<div class="heading">
+    <h1>AuraPicks Collection ✨</h1>
+    <p>Little details, lovely styles.</p>
+</div>
+
+<div class="container">
+
+<div class="details">
+
+    <div class="image-box">
+        <img id="productImage" src="" alt="Product Image">
+    </div>
+
+    <div class="info">
+
+        <span class="tag" id="collection"></span>
+
+        <h2 id="productName"></h2>
+
+        <div class="price">
+            ₹<span id="productPrice"></span>
+            <span class="old-price" id="oldPrice"></span>
+        </div>
+
+        <p class="description" id="description"></p>
+
+        <h3>Select Size</h3>
+        <div class="sizes" id="sizes"></div>
+
+        <h3>Quantity</h3>
+        <div class="quantity">
+            <button onclick="changeQty(-1)">−</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <div class="actions">
+            <button class="add" onclick="addToCart()">🛒 Add to Cart</button>
+            <button class="buy" onclick="buyNow()">BUY NOW →</button>
+        </div>
+
+        <div class="features">
+            🚚 Delivery available<br>
+            ↩️ 7 Days Return Policy<br>
+            ✨ Premium Quality Fabric<br>
+            🔒 Secure Checkout
+        </div>
+
+    </div>
+</div>
+</div>
+
+<footer>
+    © 2026 AuraFit | Style for Every Little Moment ✦
+</footer>
+
+<script>
+
+const products = {
+    "rose-ruffle-dress":{
+        name:"Rosé Ruffle Dress",
+        category:"Girls Collection",
+        price:1299,
+        old:1599,
+        image:"images/au1.jpg.jpg",
+        description:"A beautiful ruffle dress with a soft and comfortable feel. Perfect for celebrations, family outings and special occasions.",
+        sizes:["S","M","L","XL",""]
+    },
+
+    "urban-drift-coord":{
+        name:"Urban Drift Co-ord",
+        category:"Boys Collection",
+        price:1199,
+        old:1499,
+        image:"https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800",
+        description:"A trendy co-ord outfit designed for everyday comfort. A stylish choice for outings and casual occasions.",
+        sizes:["2-3Y","3-4Y","4-5Y","5-6Y","6-7Y"]
+    },
+
+    "mini-moon-romper":{
+        name:"Mini Moon Romper",
+        category:"Baby Collection",
+        price:799,
+        old:999,
+        image:"https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800",
+        description:"A cute and comfortable baby romper with a soft-feel design. Made for little everyday adventures.",
+        sizes:["0-3M","3-6M","6-9M","9-12M","12-18M"]
+    },
+
+    "lilac-dream-set":{
+        name:"Lilac Dream Set",
+        category:"Girls Collection",
+        price:1399,
+        old:1699,
+        image:"https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?w=800",
+        description:"A lovely lilac outfit with delicate styling. A charming choice for parties and special family moments.",
+        sizes:["2-3Y","3-4Y","4-5Y","5-6Y","6-7Y"]
+    },
+
+    "cloudy-street-shirt":{
+        name:"Cloudy Street Shirt",
+        category:"Boys Collection",
+        price:999,
+        old:1299,
+        image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
+        description:"A relaxed street-style shirt with a modern look. Suitable for casual days and weekend outings.",
+        sizes:["2-3Y","3-4Y","4-5Y","5-6Y","6-7Y"]
+    },
+
+    "tiny-bloom-jumpsuit":{
+        name:"Tiny Bloom Jumpsuit",
+        category:"Baby Collection",
+        price:899,
+        old:1099,
+        image:"https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800",
+        description:"A sweet floral-inspired jumpsuit for little ones. Designed for easy everyday styling and comfort.",
+        sizes:["0-3M","3-6M","6-9M","9-12M","12-18M"]
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id") || "rose-ruffle-dress";
+const product = products[id];
+
+let quantity = 1;
+let selectedSize = "";
+
+if(!product){
+    document.querySelector(".container").innerHTML =
+    "<h2 style='text-align:center'>Product not found! Please return to AuraPicks.</h2>";
+}else{
+
+    document.getElementById("productName").textContent=product.name;
+    document.getElementById("collection").textContent=product.category;
+    document.getElementById("productPrice").textContent=product.price.toLocaleString("en-IN");
+    document.getElementById("oldPrice").textContent="₹"+product.old.toLocaleString("en-IN");
+    document.getElementById("description").textContent=product.description;
+    document.getElementById("productImage").src=product.image;
+    document.getElementById("productImage").alt=product.name;
+
+    document.getElementById("sizes").innerHTML=
+    product.sizes.map((s,i)=>
+    `<button class="size ${i===0?'active':''}" onclick="selectSize(this,'${s}')">${s}</button>`
+    ).join("");
+
+    selectedSize=product.sizes[0];
+}
+
+function selectSize(button,size){
+    document.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
+    button.classList.add("active");
+    selectedSize=size;
+}
+
+function changeQty(value){
+    quantity=Math.max(1,quantity+value);
+    document.getElementById("qty").textContent=quantity;
+}
+
+function getCart(){
+    return JSON.parse(localStorage.getItem("aurafitCart") || "[]");
+}
+
+function saveCart(cart){
+    localStorage.setItem("aurafitCart",JSON.stringify(cart));
+}
+
+function addToCart(){
+    if(!product)return;
+
+    let cart=getCart();
+
+    let existing=cart.find(item=>
+        item.name===product.name && item.size===selectedSize
+    );
+
+    if(existing){
+        existing.quantity+=quantity;
+    }else{
+        cart.push({
+            name:product.name,
+            price:product.price,
+            image:product.image,
+            size:selectedSize,
+            quantity:quantity
+        });
+    }
+
+    saveCart(cart);
+    alert(product.name+" added to cart successfully! 🛒");
+}
+
+function buyNow(){
+    if(!product)return;
+
+    const orderProduct={
+        name:product.name,
+        price:product.price,
+        image:product.image,
+        size:selectedSize,
+        quantity:quantity
+    };
+
+    localStorage.setItem("aurafitBuyNow",JSON.stringify(orderProduct));
+
+    window.location.href="order.html";
+}
+
+</script>
+
+</body>
+</html>

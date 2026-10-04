@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit | AuraPicks</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    min-height:100vh;
+    color:#513b63;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,190,220,.75),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(190,190,255,.75),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 50% 85%,
+            rgba(170,220,255,.70),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffe7f2,
+            #e9e1ff,
+            #dcefff,
+            #f7e5ff
+        );
+
+    background-attachment:fixed;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:75px;
+
+    padding:0 45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.85);
+
+    box-shadow:
+        0 5px 25px
+        rgba(100,80,140,.12);
+
+    position:sticky;
+    top:0;
+
+    z-index:100;
+}
+
+
+/* LOGO */
+
+.logo{
+    font-size:28px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    color:#714c91;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+
+    gap:28px;
+}
+
+.nav-links a{
+    color:#60496f;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d45b9f;
+
+    transform:translateY(-2px);
+}
+
+
+/* NAV ICONS */
+
+.nav-icons{
+    display:flex;
+
+    gap:18px;
+}
+
+.nav-icons a{
+    color:#60496f;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    transition:.3s;
+}
+
+.nav-icons a:hover{
+    color:#d45b9f;
+
+    transform:scale(1.12);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    text-align:center;
+
+    padding:
+        55px
+        20px
+        38px;
+}
+
+.header h1{
+    font-size:46px;
+
+    letter-spacing:3px;
+
+    color:#68477d;
+
+    text-shadow:
+        0 3px 12px
+        rgba(120,80,150,.12);
+}
+
+.header p{
+    margin-top:12px;
+
+    color:#80698d;
+
+    font-size:16px;
+
+    letter-spacing:.3px;
+}
+
+
+/* =========================
+   PRODUCTS
+   EXACTLY 3 COLUMNS
+========================= */
+
+.products{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:
+        20px auto
+        70px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:28px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card{
+
+    background:
+        rgba(255,255,255,.70);
+
+    border:
+        2px solid
+        rgba(255,255,255,.85);
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(100,80,140,.16);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.product-card:hover{
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 22px 45px
+        rgba(100,80,150,.22);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image{
+
+    width:100%;
+
+    height:330px;
+
+    overflow:hidden;
+
+    background:#eee5f8;
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.product-card:hover
+.product-image img{
+
+    transform:scale(1.05);
+}
+
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info{
+
+    padding:22px;
+}
+
+.product-info h2{
+
+    color:#60416f;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.category{
+
+    color:#8a7195;
+
+    font-size:13px;
+
+    margin-bottom:13px;
+}
+
+.price{
+
+    color:#533862;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.cart-btn,
+.buy-btn{
+
+    flex:1;
+
+    padding:12px 8px;
+
+    border-radius:22px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+/* ADD TO CART */
+
+.cart-btn{
+
+    background:
+        rgba(255,255,255,.90);
+
+    color:#674873;
+
+    border:
+        1px solid
+        #d9c9e2;
+}
+
+.cart-btn:hover{
+
+    background:#f5e9ff;
+
+    transform:scale(1.03);
+}
+
+
+/* BUY NOW */
+
+.buy-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef91bd,
+            #9b83d9,
+            #72a9df
+        );
+
+    color:white;
+
+    border:none;
+
+    box-shadow:
+        0 7px 18px
+        rgba(150,110,190,.20);
+}
+
+.buy-btn:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:
+        0 10px 25px
+        rgba(140,100,190,.28);
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.products::before{
+
+    content:"✦";
+
+    position:fixed;
+
+    left:25px;
+
+    bottom:35px;
+
+    font-size:45px;
+
+    color:#d58bb8;
+
+    opacity:.45;
+
+    pointer-events:none;
+}
+
+.products::after{
+
+    content:"✧";
+
+    position:fixed;
+
+    right:30px;
+
+    top:120px;
+
+    font-size:42px;
+
+    color:#8c83d4;
+
+    opacity:.45;
+
+    pointer-events:none;
+}
+
+
+/* =========================
+   MOBILE
+   STILL 3 COLUMNS
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+
+        padding:0 18px;
+    }
+
+    .nav-links{
+
+        gap:10px;
+    }
+
+    .nav-links a{
+
+        font-size:11px;
+    }
+
+    .logo{
+
+        font-size:20px;
+    }
+
+    .products{
+
+        width:96%;
+
+        gap:15px;
+    }
+
+    .product-image{
+
+        height:260px;
+    }
+
+    .product-info{
+
+        padding:15px;
+    }
+
+    .product-info h2{
+
+        font-size:17px;
+    }
+
+    .category{
+
+        font-size:11px;
+    }
+
+    .price{
+
+        font-size:17px;
+    }
+
+    .cart-btn,
+    .buy-btn{
+
+        font-size:10px;
+
+        padding:10px 4px;
+    }
+
+    .header h1{
+
+        font-size:34px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<div class="navbar">
+
+    <div class="logo">
+        AuraFit ✦
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="womens.html">
+            Women
+        </a>
+
+        <a href="mens.html">
+            Men
+        </a>
+
+        <a href="kids.html">
+            Kids
+        </a>
+
+        <a href="aurapicks.html">
+            AuraPicks
+        </a>
+
+    </div>
+
+
+    <div class="nav-icons">
+
+        <a href="my-profile.html">
+            👤
+        </a>
+
+        <a href="cart-product.html">
+            🛒
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<div class="header">
+
+    <h1>
+        ✦ AuraPicks ✦
+    </h1>
+
+    <p>
+        Curated styles for Girls • Boys • Little Stars ✨
+    </p>
+
+</div>
+
+
+
+<!-- =========================
+     PRODUCT GRID
+========================= -->
+
+<div class="products">
+
+
+    <!-- =====================
+         PRODUCT 1
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="images/au1.jpg.jpg"
+                alt="Rosé Ruffle Dress">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>
+                Rosé Ruffle Dress
+            </h2>
+
+            <p class="category">
+                🌸 Girls Collection
+            </p>
+
+            <p class="price">
+                ₹1,299
+            </p>
+            <p class="Size">
+                S M L XL XXL 
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart(
+                        'Rosé Ruffle Dress',
+                        '₹1,299',
+                        'aura-girl-1.jpg'
+                    )">
+
+                    🛒 ADD
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow(
+                        'Rosé Ruffle Dress',
+                        '₹1,299',
+                        'aura-girl-1.jpg'
+                    )">
+
+                    BUY NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         PRODUCT 2
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="images/au2.jpg.jpg"
+                alt="Urban Drift Co-ord">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>
+                Urban Drift Co-ord
+            </h2>
+
+            <p class="category">
+                🖤 Boys Collection
+            </p>
+
+            <p class="price">
+                ₹1,199
+            </p>
+            <p class="Size">
+                S M L XL XXL 
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart(
+                        'Urban Drift Co-ord',
+                        '₹1,199',
+                        'aura-boy-1.jpg'
+                    )">
+
+                    🛒 ADD
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow(
+                        'Urban Drift Co-ord',
+                        '₹1,199',
+                        'aura-boy-1.jpg'
+                    )">
+
+                    BUY NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         PRODUCT 3
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="images/au3.jpg.jpg"
+                alt="Mini Moon Romper">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>
+                Mini Moon Romper
+            </h2>
+
+            <p class="category">
+                🧸 Baby Collection
+            </p>
+
+            <p class="price">
+                ₹799
+            </p>
+            <p class="Size">
+                1-2Y 
+                2-4Y
+                4-5Y
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart(
+                        'Mini Moon Romper',
+                        '₹799',
+                        'aura-baby-1.jpg'
+                    )">
+
+                    🛒 ADD
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow(
+                        'Mini Moon Romper',
+                        '₹799',
+                        'aura-baby-1.jpg'
+                    )">
+
+                    BUY NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         PRODUCT 4
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="images/au4.jpg.jpg"
+                alt="Lilac Dream Set">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>
+                Lilac Dream Set
+            </h2>
+
+            <p class="category">
+                ✨ Girls Collection
+            </p>
+
+            <p class="price">
+                ₹1,099
+            </p>
+            <p class="Size">
+                S M L XL XXL 
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart(
+                        'Lilac Dream Set',
+                        '₹1,099',
+                        'aura-girl-2.jpg'
+                    )">
+
+                    🛒 ADD
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow(
+                        'Lilac Dream Set',
+                        '₹1,099',
+                        'aura-girl-2.jpg'
+                    )">
+
+                    BUY NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         PRODUCT 5
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="images/au5.jpg.jpg"
+                alt="Cloudy Street Shirt">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>
+                Cloudy Street Shirt
+            </h2>
+
+            <p class="category">
+                🩵 Boys Collection
+            </p>
+
+            <p class="price">
+                ₹899
+            </p>
+            <p class="size">
+            S M L XL XXL                
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart(
+                        'Cloudy Street Shirt',
+                        '₹899',
+                        'aura-boy-2.jpg'
+                    )">
+
+                    🛒 ADD
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow(
+                        'Cloudy Street Shirt',
+                        '₹899',
+                        'aura-boy-2.jpg'
+                    )">
+
+                    BUY NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         PRODUCT 6
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="images/au6.jpg.jpg"
+                alt="Tiny Bloom Jumpsuit">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>
+                Tiny Bloom Jumpsuit
+            </h2>
+
+            <p class="category">
+                🌈 Baby Collection
+            </p>
+
+            <p class="price">
+                ₹849
+            </p>
+            <p class="Size">
+                5-8Y
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart(
+                        'Tiny Bloom Jumpsuit',
+                        '₹849',
+                        'aura-baby-2.jpg'
+                    )">
+
+                    🛒 ADD
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow(
+                        'Tiny Bloom Jumpsuit',
+                        '₹849',
+                        'aura-baby-2.jpg'
+                    )">
+
+                    BUY NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart(name, price, image){
+
+    let cart =
+        JSON.parse(
+            localStorage.getItem("cartProducts")
+        ) || [];
+
+
+    let existingProduct =
+        cart.find(
+            item => item.name === name
+        );
+
+
+    if(existingProduct){
+
+        existingProduct.quantity =
+            (existingProduct.quantity || 1) + 1;
+
+    }
+
+    else{
+
+        cart.push({
+
+            name:name,
+
+            price:price,
+
+            image:image,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cartProducts",
+        JSON.stringify(cart)
+    );
+
+
+    alert("🛒 Product Added to Cart!");
+
+}
+
+
+
+/* =========================
+   BUY NOW
+========================= */
+
+function buyNow(name, price, image){
+
+    const product = {
+
+        name:name,
+
+        price:price,
+
+        image:image,
+
+        quantity:1
+
+    };
+
+
+    localStorage.setItem(
+        "buyNowProduct",
+        JSON.stringify(product)
+    );
+
+
+    window.location.href =
+        "payment.html";
+
+}
+
+</script>
+
+
+</body>
+</html>

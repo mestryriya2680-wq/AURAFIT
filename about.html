@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit | About Us</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    min-height:100vh;
+
+    color:#513d60;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,177,215,.75),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(178,183,255,.70),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 90%,
+            rgba(255,203,226,.70),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(178,221,255,.65),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #eee9ff,
+            #e4f5ff,
+            #fceafa
+        );
+
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    height:75px;
+
+    padding:0 45px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:
+        rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.85);
+
+    box-shadow:
+        0 5px 25px
+        rgba(100,70,130,.12);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    color:#70477e;
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:25px;
+}
+
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#624b6d;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+
+.nav-links a:hover{
+
+    color:#d45b9b;
+
+    transform:translateY(-2px);
+}
+
+
+.nav-icons{
+
+    display:flex;
+
+    gap:17px;
+}
+
+
+.nav-icons a{
+
+    text-decoration:none;
+
+    color:#624b6d;
+
+    font-size:21px;
+
+    transition:.3s;
+}
+
+
+.nav-icons a:hover{
+
+    color:#d45b9b;
+
+    transform:scale(1.12);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+    min-height:420px;
+
+    margin:50px auto 35px;
+
+    padding:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    background:
+        rgba(255,255,255,.55);
+
+    border:
+        2px solid
+        rgba(255,255,255,.8);
+
+    border-radius:40px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 20px 55px
+        rgba(100,70,130,.15);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.hero::before{
+
+    content:"";
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,132,190,.18);
+
+    position:absolute;
+
+    right:-70px;
+
+    top:-80px;
+}
+
+
+.hero-text{
+
+    width:58%;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+.small-title{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.75);
+
+    color:#b34b87;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+}
+
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.05;
+
+    color:#663b70;
+
+    letter-spacing:2px;
+}
+
+
+.hero h1 span{
+
+    color:#d65396;
+}
+
+
+.hero p{
+
+    margin-top:20px;
+
+    max-width:600px;
+
+    line-height:1.8;
+
+    color:#765f7e;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   FASHION ORB
+========================= */
+
+.hero-art{
+
+    width:310px;
+
+    height:310px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #fff,
+            #ffd9eb 35%,
+            #d8caff 68%,
+            #b8ddf5
+        );
+
+    box-shadow:
+
+        0 20px 50px
+        rgba(130,80,160,.20);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+}
+
+
+.hero-art::before{
+
+    content:"✦";
+
+    font-size:120px;
+
+    color:rgba(255,255,255,.8);
+
+    text-shadow:
+        0 5px 20px
+        rgba(160,80,150,.18);
+}
+
+
+.hero-art::after{
+
+    content:"STYLE • AURA • YOU";
+
+    position:absolute;
+
+    bottom:50px;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:#80527f;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   ABOUT CARDS
+========================= */
+
+.section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:28px;
+}
+
+
+.section-title h2{
+
+    font-size:34px;
+
+    color:#633c70;
+}
+
+
+.section-title p{
+
+    margin-top:8px;
+
+    color:#816b89;
+
+    font-size:14px;
+}
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+
+.card{
+
+    padding:30px 25px;
+
+    min-height:220px;
+
+    background:
+        rgba(255,255,255,.62);
+
+    border:
+        1px solid
+        rgba(255,255,255,.85);
+
+    border-radius:28px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(100,70,130,.12);
+
+    transition:.3s;
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(100,70,130,.18);
+}
+
+
+.card-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd7e9,
+            #ddd2ff,
+            #d4efff
+        );
+
+    margin-bottom:20px;
+}
+
+
+.card h3{
+
+    color:#633b70;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+
+.card p{
+
+    color:#796580;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:55px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    align-items:stretch;
+}
+
+
+.story-box{
+
+    padding:38px;
+
+    border-radius:32px;
+
+    background:
+        rgba(255,255,255,.60);
+
+    border:
+        1px solid
+        rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(100,70,130,.13);
+}
+
+
+.story-box h2{
+
+    color:#633b70;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+
+.story-box p{
+
+    color:#78627f;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+}
+
+
+.quote{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,205,226,.75),
+            rgba(221,210,255,.75),
+            rgba(205,235,255,.75)
+        );
+}
+
+
+.quote h2{
+
+    font-size:32px;
+
+    line-height:1.4;
+}
+
+
+.quote span{
+
+    color:#d15394;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:50px auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+}
+
+
+.stat{
+
+    text-align:center;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.58);
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    backdrop-filter:blur(12px);
+}
+
+
+.stat h2{
+
+    font-size:32px;
+
+    color:#bd4e91;
+}
+
+
+.stat p{
+
+    margin-top:7px;
+
+    color:#77627f;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:60px auto 70px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    border-radius:35px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,184,215,.75),
+            rgba(215,202,255,.75),
+            rgba(192,228,250,.75)
+        );
+
+    border:
+        2px solid
+        rgba(255,255,255,.8);
+
+    box-shadow:
+        0 20px 45px
+        rgba(100,70,130,.14);
+}
+
+
+.cta h2{
+
+    font-size:32px;
+
+    color:#633b70;
+
+    margin-bottom:12px;
+}
+
+
+.cta p{
+
+    color:#765f80;
+
+    margin-bottom:22px;
+}
+
+
+.cta a{
+
+    display:inline-block;
+
+    padding:13px 28px;
+
+    border-radius:28px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:bold;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ed79ad,
+            #9a7ad3,
+            #6faedb
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(150,90,170,.20);
+
+    transition:.3s;
+}
+
+
+.cta a:hover{
+
+    transform:scale(1.05);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#816b89;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        gap:12px;
+    }
+
+    .nav-links a{
+
+        font-size:11px;
+    }
+
+    .hero{
+
+        padding:35px;
+
+    }
+
+    .hero h1{
+
+        font-size:45px;
+    }
+
+    .hero-art{
+
+        width:240px;
+
+        height:240px;
+    }
+
+    .cards{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+
+        padding:0 18px;
+    }
+
+    .nav-links{
+
+        display:none;
+    }
+
+    .logo{
+
+        font-size:22px;
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:35px 22px;
+    }
+
+    .hero-text{
+
+        width:100%;
+    }
+
+    .hero h1{
+
+        font-size:40px;
+    }
+
+    .hero p{
+
+        font-size:14px;
+    }
+
+    .hero-art{
+
+        width:210px;
+
+        height:210px;
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+
+    .story{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+
+        font-size:28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<div class="navbar">
+
+    <div class="logo">
+        AuraFit ✦
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="home.html">Home</a>
+
+        <a href="womens.html">Women</a>
+
+        <a href="mens.html">Men</a>
+
+        <a href="kids.html">Kids</a>
+
+        <a href="aurapicks.html">AuraPicks</a>
+
+        <a href="style-studio.html">Style Studio</a>
+
+        <a href="about-us.html">About Us</a>
+
+    </div>
+
+
+    <div class="nav-icons">
+
+        <a href="my-profile.html">👤</a>
+
+        <a href="cart-product.html">🛒</a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="small-title">
+            WELCOME TO AURAFIT
+        </div>
+
+        <h1>
+            Fashion that
+            <span>feels like you.</span>
+        </h1>
+
+        <p>
+            AuraFit is a modern fashion studio created
+            to make style simple, expressive and accessible.
+            From everyday essentials to statement looks,
+            we bring different moods, personalities and
+            fashion ideas together in one place.
+        </p>
+
+    </div>
+
+
+    <div class="hero-art"></div>
+
+</section>
+
+
+
+<!-- =========================
+     WHAT WE DO
+========================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            ✦ What Makes AuraFit Special?
+        </h2>
+
+        <p>
+            More than fashion — it's your personal style space.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                ✨
+            </div>
+
+            <h3>
+                Curated Style
+            </h3>
+
+            <p>
+                We bring together fresh, stylish and
+                versatile fashion choices so you can
+                discover something that matches your vibe.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🌈
+            </div>
+
+            <h3>
+                For Every Vibe
+            </h3>
+
+            <p>
+                From playful looks to classic outfits,
+                AuraFit celebrates different styles,
+                personalities and fashion moods.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                💫
+            </div>
+
+            <h3>
+                Made for You
+            </h3>
+
+            <p>
+                Our goal is to make your shopping journey
+                simple, beautiful and enjoyable from
+                discovery to checkout.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     OUR STORY
+========================= -->
+
+<section class="story">
+
+
+    <div class="story-box">
+
+        <h2>
+            Our Story
+        </h2>
+
+        <p>
+            AuraFit started with a simple idea —
+            fashion should be a way to express yourself,
+            not a set of rules.
+        </p>
+
+        <p>
+            We imagined a digital fashion space where
+            different collections, aesthetics and styles
+            could come together beautifully.
+        </p>
+
+        <p>
+            That's how AuraFit became our little
+            style studio — a place where every look
+            can have its own aura.
+        </p>
+
+    </div>
+
+
+    <div class="story-box quote">
+
+        <div>
+
+            <h2>
+                "Your style is
+                <span>your aura.</span>"
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+    <div class="stat">
+
+        <h2>
+            ✦
+        </h2>
+
+        <p>
+            Creative Fashion
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            ∞
+        </h2>
+
+        <p>
+            Style Possibilities
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            ♡
+        </h2>
+
+        <p>
+            Made With Passion
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<div class="cta">
+
+    <h2>
+        Ready to Find Your Aura?
+    </h2>
+
+    <p>
+        Explore our collections and discover
+        a style that feels completely you.
+    </p>
+
+    <a href="home.html">
+        EXPLORE AURAFIT →
+    </a>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div class="footer">
+
+    © 2026 AuraFit ✦
+    Fashion • Style • Aura
+
+</div>
+
+
+</body>
+</html>
