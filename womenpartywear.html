@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit - Party Wear Dresses</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff1f5;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+nav a:hover{
+    color:#a83252;
+}
+
+/* HEADER */
+.collection-header{
+    text-align:center;
+    padding:65px 20px 50px;
+    background:linear-gradient(135deg,#f8d9e2,#f3c4d0);
+}
+
+.collection-header p{
+    color:#a83252;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.collection-header h1{
+    font-size:46px;
+    letter-spacing:2px;
+    margin:15px 0;
+    color:#6f263b;
+}
+
+.collection-header span{
+    color:#704854;
+    font-size:16px;
+}
+
+/* PRODUCTS */
+.products{
+    width:100%;
+    padding:60px 6%;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.product{
+    background:white;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.product-image{
+    position:relative;
+    width:100%;
+    height:360px;
+    overflow:hidden;
+    background:#f5dfe6;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.heart{
+    position:absolute;
+    right:15px;
+    top:15px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    font-size:23px;
+    cursor:pointer;
+    z-index:5;
+}
+
+.heart:hover{
+    color:#a83252;
+}
+
+.product-info{
+    padding:18px 15px 22px;
+}
+
+.product-info h3{
+    font-size:19px;
+    margin:0 0 8px;
+    color:#6f263b;
+}
+
+.product-info p{
+    color:#777;
+    font-size:14px;
+    margin:0 0 12px;
+    line-height:1.5;
+}
+
+.price{
+    font-size:19px;
+    font-weight:bold;
+    color:#a83252;
+    margin:12px 0;
+}
+
+.cart-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    background:#a83252;
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+.cart-btn:hover{
+    background:#7d263f;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    nav{
+        gap:15px;
+        padding:15px;
+        flex-wrap:wrap;
+    }
+
+    .collection-header h1{
+        font-size:35px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="mens.html">MEN</a>
+    <a href="womens.html">WOMEN</a>
+    <a href="kids.html">KIDS</a>
+    <a href="aurapicks.html">AURA PICKS</a>
+    <a href="style-studio.html">STYLE STUDIO</a>
+</nav>
+
+
+<!-- HEADER -->
+<section class="collection-header">
+
+    <p>AURAFIT WOMEN</p>
+
+    <h1>PARTY WEAR DRESSES</h1>
+
+    <span>Stylish dresses for your special occasions</span>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="products">
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+<div class="product">
+
+<a href="product-details.html?category=party-wear&product=1"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/par1.jpg.jpg"
+alt="Sequin Party Dress">
+
+<button class="heart" onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Sequin Party Dress</h3>
+
+<p>
+Stylish sequin party dress designed for a sparkling party look.
+</p>
+
+<div class="price">₹1499</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Sequin Party Dress')">
+ADD TO CART
+</button>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+<div class="product">
+
+<a href="product-details.html?category=party-wear&product=2"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/par2.jpg.jpg"
+alt="Velvet Party Dress">
+
+<button class="heart" onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Velvet Party Dress</h3>
+
+<p>
+Elegant velvet party dress with a rich and classic style.
+</p>
+
+<div class="price">₹1599</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Velvet Party Dress')">
+ADD TO CART
+</button>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+<div class="product">
+
+<a href="product-details.html?category=party-wear&product=3"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/par3.jpg.jpg"
+alt="Satin Party Dress">
+
+<button class="heart" onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Satin Party Dress</h3>
+
+<p>
+Smooth satin party dress with a simple and elegant finish.
+</p>
+
+<div class="price">₹1399</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Satin Party Dress')">
+ADD TO CART
+</button>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+<div class="product">
+
+<a href="product-details.html?category=party-wear&product=4"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/par4.jpg.jpg"
+alt="Off Shoulder Party Dress">
+
+<button class="heart" onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Off Shoulder Party Dress</h3>
+
+<p>
+Modern party dress with a stylish off-shoulder design.
+</p>
+
+<div class="price">₹1299</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Off Shoulder Party Dress')">
+ADD TO CART
+</button>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+<div class="product">
+
+<a href="product-details.html?category=party-wear&product=5"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/par5.jpg.jpg"
+alt="Ruffle Party Dress">
+
+<button class="heart" onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Ruffle Party Dress</h3>
+
+<p>
+Chic ruffle party dress with a stylish and playful design.
+</p>
+
+<div class="price">₹1349</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Ruffle Party Dress')">
+ADD TO CART
+</button>
+
+</div>
+
+
+</div>
+</section>
+
+
+<script>
+
+function addToCart(productName){
+    alert(productName + " added to cart!");
+}
+
+</script>
+
+</body>
+</html>

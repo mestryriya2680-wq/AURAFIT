@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit | Delivery</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    color:#49364f;
+
+    background:
+        radial-gradient(circle at 10% 15%,#f3b6cf 0,transparent 30%),
+        radial-gradient(circle at 90% 20%,#cdb8e9 0,transparent 32%),
+        radial-gradient(circle at 80% 90%,#efb5c5 0,transparent 35%),
+        linear-gradient(135deg,#f9e8f0,#eee4f5,#f8e5ea);
+
+    background-attachment:fixed;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+    height:72px;
+    padding:0 45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.7);
+
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    color:#633d6b;
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#5b4260;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.icons{
+    display:flex;
+    gap:15px;
+}
+
+.icons a{
+    text-decoration:none;
+    font-size:21px;
+}
+
+
+/* ===== PAGE TITLE ===== */
+
+.page-title{
+    text-align:center;
+    padding:45px 20px 20px;
+}
+
+.page-title h1{
+    font-size:38px;
+    color:#5f3d67;
+    margin-bottom:10px;
+}
+
+.page-title p{
+    color:#78627a;
+}
+
+
+/* ===== MAIN ===== */
+
+.container{
+    width:90%;
+    max-width:1050px;
+    margin:25px auto 60px;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:25px;
+}
+
+
+/* ===== BOX ===== */
+
+.box{
+    background:rgba(255,255,255,.58);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    box-shadow:
+        0 18px 45px rgba(90,60,100,.12);
+}
+
+.box h2{
+    color:#604068;
+    margin-bottom:22px;
+}
+
+
+/* ===== ORDER CARD ===== */
+
+.order-card{
+    display:flex;
+    gap:18px;
+    align-items:center;
+
+    background:rgba(255,255,255,.65);
+
+    padding:18px;
+    border-radius:20px;
+
+    margin-bottom:22px;
+}
+
+.order-card img{
+    width:100px;
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+}
+
+.order-info h3{
+    color:#583c60;
+    margin-bottom:8px;
+}
+
+.order-info p{
+    margin:5px 0;
+    color:#766178;
+}
+
+
+/* ===== DELIVERY ADDRESS ===== */
+
+.address{
+    background:rgba(255,255,255,.62);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    line-height:1.7;
+
+    color:#68536b;
+}
+
+.address strong{
+    color:#55365d;
+}
+
+
+/* ===== STATUS ===== */
+
+.status{
+    margin-top:25px;
+}
+
+.status-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:13px 0;
+}
+
+.circle{
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#d878a5,#9d7cc0);
+
+    color:white;
+
+    font-size:14px;
+    font-weight:bold;
+}
+
+.status-item span{
+    color:#614d65;
+    font-weight:bold;
+}
+
+.line{
+    width:2px;
+    height:25px;
+
+    background:#d7bfd9;
+
+    margin-left:16px;
+}
+
+
+/* ===== DELIVERY INFO ===== */
+
+.info-card{
+    padding:17px 0;
+
+    border-bottom:1px solid rgba(120,90,130,.15);
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.info-card:last-child{
+    border-bottom:none;
+}
+
+.info-card span:first-child{
+    color:#806b82;
+}
+
+.info-card span:last-child{
+    color:#573b5d;
+    font-weight:bold;
+}
+
+
+/* ===== TRACK BUTTON ===== */
+
+.track-btn{
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d779a5,
+            #9877bd
+        );
+
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 25px rgba(150,90,140,.20);
+
+    transition:.3s;
+}
+
+.track-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+
+    padding:25px;
+
+    color:#765f78;
+
+    font-size:14px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:800px){
+
+    .navbar{
+        padding:0 18px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .page-title h1{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="logo">
+        AuraFit ✦
+    </div>
+
+    <div class="nav-links">
+
+        <a href="home.html">Home</a>
+
+        <a href="women-product.html">Women</a>
+
+        <a href="men-product.html">Men</a>
+
+        <a href="kids-product.html">Kids</a>
+
+        <a href="aurapicks.html">AuraPicks</a>
+
+        <a href="style-studio.html">Style Studio</a>
+
+    </div>
+
+    <div class="icons">
+
+        <a href="my-profile.html">👤</a>
+
+        <a href="cart-product.html">🛒</a>
+
+    </div>
+
+</div>
+
+
+<!-- TITLE -->
+
+<div class="page-title">
+
+    <h1>📦 Your Delivery</h1>
+
+    <p>Track your AuraFit order with ease ✨</p>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+    <!-- LEFT -->
+
+    <div class="box">
+
+        <h2>🛍️ Order Details</h2>
+
+
+        <div class="order-card">
+
+            <img
+                id="productImage"
+                src="aura-girl-1.jpg"
+                alt="Product"
+            >
+
+            <div class="order-info">
+
+                <h3 id="productName">
+                    AuraFit Fashion Product
+                </h3>
+
+                <p>
+                    Order ID:
+                    <strong>#AF2026</strong>
+                </p>
+
+                <p>
+                    Quantity:
+                    <strong id="quantity">1</strong>
+                </p>
+
+                <p>
+                    Total:
+                    <strong id="price">₹1,299</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <h2>📍 Delivery Address</h2>
+
+        <div class="address">
+
+            <strong>Delivery Address</strong>
+
+            <br><br>
+
+            Name: AuraFit Customer
+
+            <br>
+
+            Address: Your saved delivery address
+
+            <br>
+
+            City: Pune, Maharashtra
+
+            <br>
+
+            PIN: 411000
+
+        </div>
+
+
+        <div class="status">
+
+            <h2>🚚 Delivery Status</h2>
+
+
+            <div class="status-item">
+
+                <div class="circle">✓</div>
+
+                <span>Order Placed</span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="status-item">
+
+                <div class="circle">✓</div>
+
+                <span>Order Confirmed</span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="status-item">
+
+                <div class="circle">✓</div>
+
+                <span>Shipped</span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="status-item">
+
+                <div class="circle">4</div>
+
+                <span>Out for Delivery</span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="status-item">
+
+                <div
+                    class="circle"
+                    style="background:#ddd;color:#888;"
+                >
+                    5
+                </div>
+
+                <span>Delivered</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+
+    <div class="box">
+
+        <h2>✨ Delivery Information</h2>
+
+
+        <div class="info-card">
+
+            <span>Order Date</span>
+
+            <span>Today</span>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span>Estimated Delivery</span>
+
+            <span>3–5 Days</span>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span>Delivery Partner</span>
+
+            <span>AuraFit Express</span>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span>Shipping</span>
+
+            <span>FREE</span>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span>Payment</span>
+
+            <span>Confirmed</span>
+
+        </div>
+
+
+        <button
+            class="track-btn"
+            onclick="trackOrder()"
+        >
+            TRACK MY ORDER →
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    © 2026 AuraFit ✦ Fashion that feels like you.
+
+</footer>
+
+
+
+<script>
+
+/* Load Buy Now product if available */
+
+let product =
+    JSON.parse(
+        localStorage.getItem("buyNowProduct")
+    );
+
+
+if(product){
+
+    document.getElementById("productName")
+        .innerText = product.name;
+
+    document.getElementById("productImage")
+        .src = product.image;
+
+    document.getElementById("quantity")
+        .innerText =
+        product.quantity || 1;
+
+    document.getElementById("price")
+        .innerText =
+        product.price;
+}
+
+
+/* Track button */
+
+function trackOrder(){
+
+    alert(
+        "📦 Your order is on the way!\n\n" +
+        "Estimated delivery: 3–5 Days ✨"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>

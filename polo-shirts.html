@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraFit | Polo T-Shirts</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fff0f5,#fce4ec,#f3e5f5);
+    color:#222;
+}
+
+header{
+    background:#fff;
+    padding:22px;
+    text-align:center;
+    box-shadow:0 3px 15px #0001;
+}
+
+header h1{
+    color:#a83265;
+    letter-spacing:2px;
+}
+
+header p{
+    margin-top:8px;
+    color:#777;
+}
+
+.container{
+    padding:35px 6%;
+}
+
+.container h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#8e2857;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px #0001;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.info{
+    padding:18px;
+}
+
+.info h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#a83265;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#a83265;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#762044;
+}
+
+.details{
+    display:none;
+    max-width:850px;
+    margin:35px auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 30px #0002;
+}
+
+.details img{
+    width:100%;
+    max-width:330px;
+    height:380px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.detail-content{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.detail-text{
+    flex:1;
+    min-width:220px;
+}
+
+.detail-text h2{
+    margin-bottom:15px;
+}
+
+.detail-text p{
+    margin:12px 0;
+    line-height:1.6;
+}
+
+select{
+    padding:10px;
+    border-radius:8px;
+    margin:10px 0 18px;
+    border:1px solid #aaa;
+}
+
+.back{
+    background:#555;
+    margin-top:10px;
+}
+
+@media(max-width:600px){
+    .container{padding:25px 4%;}
+    .card img{height:250px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AURAFIT</h1>
+    <p>Men's Polo T-Shirt Collection</p>
+</header>
+
+<div class="container">
+    <h2>Classic Polo T-Shirts</h2>
+    <div class="products" id="products"></div>
+</div>
+
+<div class="details" id="details">
+    <div class="detail-content">
+        <img id="detailImage" src="" alt="Polo T-Shirt">
+
+        <div class="detail-text">
+            <h2 id="detailName"></h2>
+            <h2 class="price" id="detailPrice"></h2>
+
+            <p id="detailDescription"></p>
+
+            <p><b>Material:</b> Premium Cotton Blend</p>
+            <p><b>Fit:</b> Regular Fit</p>
+            <p><b>Return:</b> 7 Days Return Available</p>
+
+            <label><b>Select Size:</b></label><br>
+            <select id="size">
+                <option value="">Choose Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+
+            <button onclick="addToCart()">Add to Cart</button>
+            <br><br>
+            <button onclick="buyNow()">Buy Now</button>
+            <br><br>
+            <button class="back" onclick="goBack()">Back to Products</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const products = [
+{
+ name:"Classic Black Polo T-Shirt",
+ price:699,
+ image:"https://images.unsplash.com/photo-1625910513413-5fc45e5d9c1b?w=700",
+ description:"A timeless black polo T-shirt with a smart collar and comfortable everyday fit."
+},
+{
+ name:"Navy Blue Polo T-Shirt",
+ price:749,
+ image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700",
+ description:"A versatile navy polo designed for casual outings and everyday styling."
+},
+{
+ name:"White Classic Polo T-Shirt",
+ price:699,
+ image:"https://images/p1.jpg ",
+ description:"A clean and simple white polo T-shirt for a fresh casual look."
+},
+{
+ name:"Olive Green Polo T-Shirt",
+ price:799,
+ image:"https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=700",
+ description:"An olive green polo with a relaxed and comfortable style."
+},
+{
+ name:"Maroon Premium Polo T-Shirt",
+ price:849,
+ image:"https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=700",
+ description:"A premium maroon polo T-shirt suitable for casual and semi-casual occasions."
+}
+];
+
+const productBox=document.getElementById("products");
+
+products.forEach((product,index)=>{
+    productBox.innerHTML+=`
+    <div class="card">
+        <img src="${product.image}" alt="${product.name}">
+        <div class="info">
+            <h3>${product.name}</h3>
+            <p class="price">₹${product.price}</p>
+            <button onclick="showDetails(${index})">View Details</button>
+        </div>
+    </div>`;
+});
+
+let selectedProduct=null;
+
+function showDetails(index){
+    selectedProduct=products[index];
+
+    document.getElementById("detailImage").src=selectedProduct.image;
+    document.getElementById("detailName").innerText=selectedProduct.name;
+    document.getElementById("detailPrice").innerText="₹"+selectedProduct.price;
+    document.getElementById("detailDescription").innerText=selectedProduct.description;
+
+    document.getElementById("details").style.display="block";
+    document.getElementById("details").scrollIntoView({behavior:"smooth"});
+}
+
+function addToCart(){
+    const size=document.getElementById("size").value;
+
+    if(!size){
+        alert("Please select your size!");
+        return;
+    }
+
+    let cart=JSON.parse(localStorage.getItem("aurafitCart"))||[];
+
+    cart.push({
+        name:selectedProduct.name,
+        price:selectedProduct.price,
+        image:selectedProduct.image,
+        size:size,
+        quantity:1
+    });
+
+    localStorage.setItem("aurafitCart",JSON.stringify(cart));
+
+    alert("Product added to cart successfully!");
+}
+
+function buyNow(){
+    const size=document.getElementById("size").value;
+
+    if(!size){
+        alert("Please select your size!");
+        return;
+    }
+
+    const item={
+        name:selectedProduct.name,
+        price:selectedProduct.price,
+        image:selectedProduct.image,
+        size:size,
+        quantity:1
+    };
+
+    localStorage.setItem("aurafitBuyNow",JSON.stringify(item));
+
+    window.location.href="payment.html";
+}
+
+function goBack(){
+    document.getElementById("details").style.display="none";
+    window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>

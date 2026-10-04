@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic T-Shirts | AuraFit</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:white;
+    color:#222;
+}
+
+nav{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    border-bottom:1px solid #eee;
+    background:white;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+nav a:hover{
+    color:#7d459b;
+}
+
+.collection-header{
+    text-align:center;
+    padding:70px 20px 50px;
+    background:#faf6fb;
+}
+
+.collection-header p{
+    color:#8b4bb3;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.collection-header h1{
+    font-size:48px;
+    letter-spacing:3px;
+    margin:15px 0;
+}
+
+.collection-header span{
+    color:#777;
+    font-size:16px;
+}
+
+.casual-products{
+    width:100%;
+    padding:60px 6%;
+}
+
+.casual-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:30px;
+    width:100%;
+}
+
+.product-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.casual-product{
+    width:100%;
+    background:white;
+    transition:.3s;
+}
+
+.casual-product:hover{
+    transform:translateY(-5px);
+}
+
+.product-image{
+    position:relative;
+    width:100%;
+    height:350px;
+    overflow:hidden;
+    background:#f5f5f5;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.heart{
+    position:absolute;
+    right:15px;
+    top:15px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    font-size:24px;
+    cursor:pointer;
+    z-index:5;
+}
+
+.heart:hover{
+    color:#7d459b;
+}
+
+.product-details{
+    padding:18px 5px 25px;
+}
+
+.product-details h3{
+    font-size:19px;
+    margin:0 0 8px;
+}
+
+.product-details p{
+    color:#777;
+    font-size:14px;
+    margin:0 0 12px;
+}
+
+.product-details h4{
+    font-size:19px;
+    margin:12px 0;
+}
+
+.cart-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    background:#7d459b;
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+.cart-btn:hover{
+    background:#542d6d;
+}
+
+@media(max-width:1000px){
+    .casual-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    nav{
+        gap:15px;
+        padding:15px;
+        flex-wrap:wrap;
+    }
+
+    .collection-header h1{
+        font-size:35px;
+    }
+
+    .casual-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="mens.html">MEN</a>
+    <a href="womens.html">WOMEN</a>
+    <a href="kids.html">KIDS</a>
+    <a href="aurapicks.html">AURAPICKS</a>
+    <a href="style-studio.html">STYLE STUDIO</a>
+</nav>
+
+<section class="collection-header">
+    <p>AURAFIT MEN'S COLLECTION</p>
+    <h1>GRAPHIC T-SHIRTS</h1>
+    <span>Bold prints. Creative graphics. Everyday street style.</span>
+</section>
+
+<section class="casual-products">
+<div class="casual-grid">
+
+<!-- PRODUCT 1 -->
+<a href="product-details.html?category=graphic-tshirt&product=1" class="product-link">
+<div class="casual-product">
+<div class="product-image">
+<img src="images/g1.jpg.jpg" alt="Urban Graphic T-Shirt">
+<button class="heart" onclick="event.preventDefault(); event.stopPropagation();">♡</button>
+</div>
+<div class="product-details">
+<h3>Urban Graphic T-Shirt</h3>
+<p>Trendy graphic print with a comfortable everyday fit.</p>
+<h4>₹699</h4>
+<button class="cart-btn" onclick="event.preventDefault(); event.stopPropagation();">ADD TO CART</button>
+</div>
+</div>
+</a>
+
+<!-- PRODUCT 2 -->
+<a href="product-details.html?category=graphic-tshirt&product=2" class="product-link">
+<div class="casual-product">
+<div class="product-image">
+<img src="images/g2.jpg.jpg" alt="Street Graphic T-Shirt">
+<button class="heart" onclick="event.preventDefault(); event.stopPropagation();">♡</button>
+</div>
+<div class="product-details">
+<h3>Street Graphic T-Shirt</h3>
+<p>Cool streetwear-inspired graphic design.</p>
+<h4>₹749</h4>
+<button class="cart-btn" onclick="event.preventDefault(); event.stopPropagation();">ADD TO CART</button>
+</div>
+</div>
+</a>
+
+<!-- PRODUCT 3 -->
+<a href="product-details.html?category=graphic-tshirt&product=3" class="product-link">
+<div class="casual-product">
+<div class="product-image">
+<img src="images/g3.jpg.jpg" alt="Abstract Graphic T-Shirt">
+<button class="heart" onclick="event.preventDefault(); event.stopPropagation();">♡</button>
+</div>
+<div class="product-details">
+<h3>Abstract Graphic T-Shirt</h3>
+<p>Creative abstract artwork with a modern look.</p>
+<h4>₹799</h4>
+<button class="cart-btn" onclick="event.preventDefault(); event.stopPropagation();">ADD TO CART</button>
+</div>
+</div>
+</a>
+
+<!-- PRODUCT 4 -->
+
+
+
+</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraFit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<style>
+
+/* ===== AURAFIT DECENT AESTHETIC HOME ===== */
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Arial, sans-serif;
+    color:#3f2945;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(244,170,200,0.45),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(190,165,225,0.40),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 80% 90%,
+            rgba(238,150,175,0.30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8e7ef 0%,
+            #eadff2 45%,
+            #f7e3e8 100%
+        );
+
+    background-attachment:fixed;
+    overflow-x:hidden;
+}
+
+
+/* Soft aesthetic glow */
+
+body::before{
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    top:-120px;
+    left:-100px;
+
+    background:rgba(226,105,155,0.18);
+
+    border-radius:50%;
+    filter:blur(70px);
+
+    z-index:-1;
+}
+
+
+/* Purple soft glow */
+
+body::after{
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    right:-150px;
+    bottom:-150px;
+
+    background:rgba(145,105,190,0.18);
+
+    border-radius:50%;
+    filter:blur(80px);
+
+    z-index:-1;
+}
+
+
+/* ===== HOME HERO ===== */
+
+.hero,
+.home-hero,
+.banner,
+.hero-section{
+    position:relative;
+    min-height:80vh;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255,255,255,0.18),
+            rgba(255,225,238,0.10),
+            rgba(225,210,240,0.15)
+        );
+
+    overflow:hidden;
+}
+
+
+/* Elegant glass effect */
+
+.hero-content,
+.home-content,
+.banner-content{
+
+    background:rgba(255,255,255,0.42);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.65);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 18px 45px rgba(100,65,100,0.12);
+
+    padding:30px;
+}
+
+
+/* Heading */
+
+.hero h1,
+.home-hero h1,
+.banner h1{
+
+    color:#56375e;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 3px 15px rgba(130,70,130,0.15);
+}
+
+
+/* Paragraph */
+
+.hero p,
+.home-hero p,
+.banner p{
+    color:#70566f;
+    line-height:1.7;
+}
+
+
+/* Aesthetic button */
+
+.hero button,
+.home-hero button,
+.banner button{
+
+    background:
+        linear-gradient(
+            135deg,
+            #d875a5,
+            #9b79bd
+        );
+
+    color:white;
+
+    border:none;
+    border-radius:25px;
+
+    padding:13px 28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 22px rgba(150,90,140,0.20);
+
+    transition:0.3s;
+}
+
+
+.hero button:hover,
+.home-hero button:hover,
+.banner button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(150,90,140,0.28);
+}
+
+
+.fit-check {
+  padding: 85px 5%;
+  background:
+    radial-gradient(circle at 10% 10%, #e8d7f8, transparent 35%),
+    linear-gradient(135deg, #faf5ff, #f9eaf4, #eee5fb);
+  overflow: hidden;
+}
+
+.fit-heading {
+  text-align: right;
+  margin-bottom: 45px;
+  
+}
+
+
+
+/* AURAFIT OFFER SECTION */
+
+.aura-offers {
+  padding: 75px 5%;
+  background:
+    radial-gradient(circle at 10% 10%, #ead8fa, transparent 35%),
+    linear-gradient(135deg, #faf4ff, #fcecf5, #f3eaff);
+  overflow: hidden;
+}
+
+.offer-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.offer-heading span {
+  color: #9664b5;
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.offer-heading h2 {
+  color: #432957;
+  font-size: clamp(25px, 4vw, 42px);
+  margin: 12px 0;
+  font-family: Georgia, serif;
+}
+
+.offer-heading p {
+  color: #806b8b;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.offer-card {
+  position: relative;
+  min-height: 440px;
+  border-radius: 22px;
+  padding: 35px 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 15px 40px #8d6ca322;
+  transition: transform 0.4s, box-shadow 0.4s;
+  isolation: isolate;
+}
+
+.offer-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 25px 45px #75538c35;
+}
+
+.grand-sale {
+  background:
+    radial-gradient(circle at 90% 15%, #ffffffb0, transparent 28%),
+    linear-gradient(145deg, #d9b9f4, #f7e5fa 65%, #e8d0f6);
+  color: #542879;
+}
+
+.festive-sale {
+  background:
+    radial-gradient(circle at 85% 15%, #fff6d9, transparent 30%),
+    linear-gradient(145deg, #ffe0c5, #fff0df 55%, #f4c5a8);
+  color: #9c254f;
+}
+
+.bogo-sale {
+  background:
+    radial-gradient(circle at 90% 10%, #ffffffc9, transparent 30%),
+    linear-gradient(145deg, #f4c8ec, #fceafa 60%, #e6c5fa);
+  color: #702b91;
+}
+
+.offer-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.offer-brand {
+  display: block;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.script-text {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 23px;
+  margin: 0;
+}
+
+.offer-content h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 0.98;
+  margin: 8px 0 15px;
+  letter-spacing: -1px;
+}
+
+.offer-content > p:not(.script-text) {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.discount {
+  margin-top: 24px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.discount strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 65px;
+  line-height: 1.1;
+}
+
+.free-text {
+  font-family: Georgia, serif;
+  font-size: 65px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.offer-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #67358b;
+  padding: 13px 24px;
+  border-radius: 30px;
+  margin-top: 25px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.festive-sale .offer-btn {
+  background: #a52d55;
+}
+
+.bogo-sale .offer-btn {
+  background: #773a9a;
+}
+
+.offer-btn:hover {
+  transform: scale(1.07);
+  background: #39204e;
+}
+
+.offer-decoration {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  font-size: 100px;
+  opacity: 0.13;
+  z-index: 1;
+  animation: auraFloat 4s ease-in-out infinite;
+}
+
+@keyframes auraFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(12deg);
+  }
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .aura-offers {
+    padding: 50px 18px;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    min-height: 390px;
+    padding: 30px;
+  }
+
+  .offer-content h2 {
+    font-size: 43px;
+  }
+}
+
+
+/* COMMON */
+.section-tag {
+    color: #a16b9c;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    color: #a16b9c;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 45px);
+    margin: 12px 0;
+    color: #30253a;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+
+/* 1. AURA STORY */
+.aura-story {
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #f8eafa, #fff7f1);
+    overflow: hidden;
+}
+
+.story-content {
+    max-width: 520px;
+}
+
+.story-content h2 {
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.08;
+    color: #33263b;
+    margin: 20px 0;
+}
+
+.story-content h2 span {
+    color: #a66aa2;
+    font-style: italic;
+}
+
+.story-content p {
+    line-height: 1.9;
+    color: #655d69;
+    margin-bottom: 30px;
+}
+
+.story-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #38283f;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.story-btn:hover {
+    background: #a66aa2;
+    transform: translateY(-4px);
+}
+
+.story-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.story-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #c9a1d0, #8d699f);
+    box-shadow: 15px 20px 50px #9d7aa355;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    outline: 1px solid #ffffff99;
+    outline-offset: -15px;
+    animation: auraFloat 4s ease-in-out infinite;
+}
+
+.story-circle span {
+    letter-spacing: 7px;
+    font-size: 12px;
+}
+
+.story-circle h3 {
+    font-size: 43px;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.story-circle small {
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+@keyframes auraFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+
+/* 2. STYLE INSPIRATION */
+.style-inspiration {
+    padding: 85px 7%;
+    background: #fffafc;
+}
+
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.inspire-card {
+    min-height: 340px;
+    padding: 25px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.inspire-card:hover {
+    transform: translateY(-10px);
+}
+
+.inspire-card span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.inspire-card h3 {
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+.inspire-one {
+    background: linear-gradient(145deg, #c78eaa, #704e78);
+}
+
+.inspire-two {
+    background: linear-gradient(145deg, #e3a58d, #9d5b66);
+}
+
+.inspire-three {
+    background: linear-gradient(145deg, #9e9bd0, #514c83);
+}
+
+
+/* 3. BEHIND THE BRAND */
+.behind-brand {
+    position: relative;
+    padding: 100px 10%;
+    background: #30263a;
+    color: white;
+    overflow: hidden;
+}
+
+.brand-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.brand-content h2 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.brand-content h2 span {
+    color: #d9a9d5;
+    font-style: italic;
+}
+
+.brand-content > p {
+    color: #d5cbd9;
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.brand-decoration {
+    position: absolute;
+    right: 7%;
+    top: -100px;
+    font-size: 450px;
+    font-family: Georgia, serif;
+    color: #ffffff08;
+    pointer-events: none;
+}
+
+.brand-values {
+    display: flex;
+    gap: 65px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.brand-values h3 {
+    color: #d9a9d5;
+    font-size: 25px;
+}
+
+.brand-values p {
+    color: #eee;
+}
+
+
+/* 4. SEASONS */
+.season-section {
+    padding: 85px 7%;
+    background: linear-gradient(135deg, #fff8f5, #f7effb);
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.season-card {
+    min-height: 260px;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #392e3c;
+    transition: .35s;
+    border: 1px solid #ffffffaa;
+}
+
+.season-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.season-icon {
+    font-size: 38px;
+    margin-bottom: auto;
+}
+
+.season-card > span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.season-card h3 {
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.season-card p {
+    font-size: 13px;
+    color: #635b66;
+}
+
+.summer {
+    background: linear-gradient(145deg, #fce5b7, #f6c7b7);
+}
+
+.monsoon {
+    background: linear-gradient(145deg, #c6d8ee, #a9b5d7);
+}
+
+.winter {
+    background: linear-gradient(145deg, #e5d9f1, #c4b5dc);
+}
+
+.festive {
+    background: linear-gradient(145deg, #f5c9d7, #e6a9ad);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .aura-story {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .story-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .inspiration-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inspire-card {
+        min-height: 250px;
+    }
+
+    .season-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand-values {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 420px) {
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
+}  
+
+
+
+</style>
+
+
+
+     <div class="navbar">
+             <h2 class="logo"> AURAFIT</h2>
+       </div>
+        <div class="icon"></div>
+       <div class="menu">
+        <ul>
+               <li><a href="#">HOME</a></li>
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="mens.html">MENS</a></li>   
+               <li><a href="womens.html">WOMENS</a></li>
+               <li><a href="kids.html">KIDS</a></li>
+               <li><a href="aurapicks.html">AURAPICKS</a></li>
+               <li><a href="style-studio.html">STYLE-STUDIO</a></li>
+               <li><a href="my-profile.html">👤</a></li>
+               <li><a href="delivery.html">🚚</a></li>
+              
+               <div class="nav-right">
+                <a href="#">❤️</a>
+                <a href="cart-product.html">🛒</a>
+
+               </div>
+
+        
+        </div>
+
+    </div>
+
+
+    <!-- SLIDER -->
+    <section class="slider">
+
+        <!-- SLIDE 1 -->
+        <div class="slide active">
+
+            <div class="image-box">
+                <img src="fashion.jpg" alt="Fashion">
+            </div>
+
+            <div class="slide-text">
+                <p>UPTO 70% OFF</p>
+
+                <h1>
+                    DISCOVER<br>
+                    SPECIAL<br>
+                    FASHION!!
+                </h1>
+
+                <button>SHOP NOW</button>
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+
+            <div class="image-box">
+                <img src="6.jpg.jpg" alt="Fashion">
+            </div>
+
+            <div class="slide-text">
+                <p>BABY FASHION</p>
+
+                <h1>
+                    THE NEW<br>
+                    LITTLE <br>
+                    ERA<br>
+                    2026
+                </h1>
+
+                <button>SHOP NOW</button>
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+
+            <div class="image-box">
+                <img src="8.jpg" alt="Fashion">
+            </div>
+
+            <div class="slide-text">
+                <p>MEGA SALE</p>
+
+                <h1>
+                    UP TO <br>
+                    50%<br>
+                    OFF!!!!!
+                </h1>
+
+                <button>SHOP NOW</button>
+            </div>
+
+        </div>
+
+
+        <!-- NEXT ARROW -->
+        <button class="next" onclick="nextSlide()">></button>
+
+
+        <!-- DOTS -->
+        <div class="dots">
+
+            <span class="dot active" onclick="showSlide(0)"></span>
+
+            <span class="dot" onclick="showSlide(1)"></span>
+
+            <span class="dot" onclick="showSlide(2)"></span>
+
+        </div>
+
+    </section>
+
+
+    <section> 
+
+        
+               <h1> FIT CHECK !!!</h1>
+
+                <div class="section_container ins_container" id="ins">
+                    <div class="ins_flex">
+                <img src="babyboy1.jpg" alt="">
+                 <img src="babyboy2.jpg" alt="">
+                  <img src="babygirl1.jpg" alt="">
+                   <img src="babygirl2.jpg" alt="">
+                    <img src="boy1.jpg" alt="">
+                     <img src="boy2.jpg" alt="">
+                      <img src="girl1.jpg" alt="">
+                       <img src="girl2.jpg" alt="">
+                    </div>
+
+                </div>
+    </section>
+
+<!-- AURAFIT OFFER SECTION -->
+<section class="aura-offers">
+
+  <div class="offer-heading">
+    <span>EXCLUSIVE DEALS</span>
+    <h2>A Little More Style, A Lot More Savings</h2>
+    <p>Discover something special at AuraFit.</p>
+  </div>
+
+  <div class="offer-grid">
+
+    <!-- GRAND SALE -->
+    <div class="offer-card grand-sale">
+      <div class="offer-content">
+        <span class="offer-brand">AURAFIT</span>
+        <p class="script-text">The Grand</p>
+        <h2>FASHION<br>SALE</h2>
+        <p>All Fashion, One Destination</p>
+
+        <div class="discount">
+          UP TO <strong>50%</strong> OFF
+        </div>
+
+        <a href="style-studio.html" class="offer-btn">
+          SHOP NOW ↗
+        </a>
+      </div>
+      <div class="offer-decoration">✦</div>
+    </div>
+
+    <!-- FESTIVE SALE -->
+    <div class="offer-card festive-sale">
+      <div class="offer-content">
+        <span class="offer-brand">AURAFIT</span>
+        <p class="script-text">Celebrate in Style</p>
+        <h2>FESTIVE<br>CELEBRATION</h2>
+        <p>DIWALI • NAVRATRI • GANPATI</p>
+
+        <div class="discount">
+          UP TO <strong>40%</strong> OFF
+        </div>
+
+        <a href="festival.html" class="offer-btn">
+          EXPLORE SALE ↗
+        </a>
+      </div>
+      <div class="offer-decoration">✺</div>
+    </div>
+
+    <!-- BUY 2 GET 1 -->
+    <div class="offer-card bogo-sale">
+      <div class="offer-content">
+        <span class="offer-brand">AURAFIT</span>
+        <p class="script-text">More Style, More Smiles</p>
+        <h2>BUY 2<br>GET 1</h2>
+        <div class="free-text">FREE ✨</div>
+        <p>Your Favourite Styles Together</p>
+
+        <a href="aurapicks.html" class="offer-btn">
+          SHOP NOW ↗
+        </a>
+      </div>
+      <div class="offer-decoration">♡</div>
+    </div>
+
+  </div>
+</section>
+
+
+  
+<!-- THE AURA STORY -->
+<section class="aura-story">
+    <div class="story-content">
+        <span class="section-tag">WELCOME TO AURAFIT</span>
+        <h2>More Than Fashion,<br><span>It's Your Aura.</span></h2>
+        <p>
+            AuraFit is a space where comfort meets creativity.
+            We believe fashion is not just about what you wear,
+            but how confidently you express yourself.
+        </p>
+        <a href="about.html" class="story-btn">Discover Our Story</a>
+    </div>
+
+    <div class="story-visual">
+        <div class="story-circle">
+            <span>AURA</span>
+            <h3>Be<br>Yourself.</h3>
+            <small>STYLE • COMFORT • CONFIDENCE</small>
+        </div>
+    </div>
+</section>
+
+
+<!-- STYLE INSPIRATION -->
+<section class="style-inspiration">
+    <div class="section-heading">
+        <span>YOUR DAILY DOSE OF STYLE</span>
+        <h2>Style Inspiration</h2>
+        <p>Find your vibe. Express your personality.</p>
+    </div>
+
+    <div class="inspiration-grid">
+        <div class="inspire-card inspire-one">
+            <span>01 / EVERYDAY</span>
+            <h3>Keep It<br>Effortless.</h3>
+        </div>
+
+        <div class="inspire-card inspire-two">
+            <span>02 / CONFIDENCE</span>
+            <h3>Wear Your<br>Confidence.</h3>
+        </div>
+
+        <div class="inspire-card inspire-three">
+            <span>03 / YOUR VIBE</span>
+            <h3>Be Your<br>Own Trend.</h3>
+        </div>
+    </div>
+</section>
+
+
+<!-- BEHIND THE BRAND -->
+<section class="behind-brand">
+    <div class="brand-decoration">A</div>
+
+    <div class="brand-content">
+        <span class="section-tag">THE HEART OF AURAFIT</span>
+        <h2>Behind The<br><span>Brand.</span></h2>
+
+        <p>
+            Born from a love for creativity and individuality,
+            AuraFit brings together fashion, comfort and self-expression.
+            Our vision is to make every style feel personal,
+            inclusive and memorable.
+        </p>
+
+        <div class="brand-values">
+            <div>
+                <h3>01</h3>
+                <p>Creativity</p>
+            </div>
+            <div>
+                <h3>02</h3>
+                <p>Inclusivity</p>
+            </div>
+            <div>
+                <h3>03</h3>
+                <p>Confidence</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FASHION THROUGH THE SEASONS -->
+<section class="season-section">
+    <div class="section-heading">
+        <span>EVERY SEASON HAS A STORY</span>
+        <h2>Fashion Through The Seasons</h2>
+        <p>Different moods. Different moments. One Aura.</p>
+    </div>
+
+    <div class="season-grid">
+        <div class="season-card summer">
+            <div class="season-icon">☀</div>
+            <span>01</span>
+            <h3>Summer</h3>
+            <p>Light moods, fresh beginnings.</p>
+        </div>
+
+        <div class="season-card monsoon">
+            <div class="season-icon">☂</div>
+            <span>02</span>
+            <h3>Monsoon</h3>
+            <p>Rainy days, cozy vibes.</p>
+        </div>
+
+        <div class="season-card winter">
+            <div class="season-icon">❄</div>
+            <span>03</span>
+            <h3>Winter</h3>
+            <p>Warm moments, timeless moods.</p>
+        </div>
+
+        <div class="season-card festive">
+            <div class="season-icon">✦</div>
+            <span>04</span>
+            <h3>Festive</h3>
+            <p>Celebrate every little moment.</p>
+        </div>
+    </div>
+</section>
+  
+
+
+          
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+</body>
+</html>

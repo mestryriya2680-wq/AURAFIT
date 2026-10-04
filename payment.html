@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AuraFit | Payment</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #75164f,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #41146f,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0d0712,
+                    #210b27,
+                    #100815
+                );
+
+        }
+
+
+        /* HEADER */
+
+        .header {
+
+            padding: 22px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(0,0,0,0.35);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid
+                rgba(255,255,255,0.12);
+
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .back {
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 20px;
+
+            border-radius: 22px;
+
+            background: linear-gradient(
+                135deg,
+                #df438f,
+                #7c3aed
+            );
+
+        }
+
+
+        /* MAIN */
+
+        .payment-container {
+
+            width: 90%;
+
+            max-width: 1050px;
+
+            margin: 45px auto;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr;
+
+            gap: 30px;
+
+        }
+
+
+        .payment-box,
+        .summary-box {
+
+            background: rgba(255,255,255,0.07);
+
+            border: 1px solid
+                rgba(255,255,255,0.13);
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            backdrop-filter: blur(15px);
+
+        }
+
+
+        h1 {
+
+            margin-bottom: 25px;
+
+            font-size: 30px;
+
+        }
+
+
+        /* PAYMENT OPTIONS */
+
+        .payment-option {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 18px;
+
+            margin-bottom: 15px;
+
+            border-radius: 16px;
+
+            border: 1px solid
+                rgba(255,255,255,0.15);
+
+            background: rgba(0,0,0,0.18);
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+
+        .payment-option:hover {
+
+            background: rgba(255,255,255,0.10);
+
+        }
+
+
+        .payment-option input {
+
+            width: 18px;
+
+            height: 18px;
+
+            accent-color: #e44c98;
+
+        }
+
+
+        .payment-icon {
+
+            font-size: 25px;
+
+        }
+
+
+        .payment-option strong {
+
+            font-size: 17px;
+
+        }
+
+
+        /* DETAILS */
+
+        .details {
+
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 20px;
+
+            border-radius: 17px;
+
+            background: rgba(0,0,0,0.25);
+
+        }
+
+
+        .details.active {
+
+            display: block;
+
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 10px;
+
+            margin-bottom: 12px;
+
+            border-radius: 10px;
+
+            border: 1px solid
+                rgba(255,255,255,0.18);
+
+            background: rgba(255,255,255,0.08);
+
+            color: white;
+
+            outline: none;
+
+        }
+
+
+        input::placeholder {
+
+            color: #c7b9ca;
+
+        }
+
+
+        .small-inputs {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+
+        }
+
+
+        /* SUMMARY */
+
+        .summary-box h2 {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .summary-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid
+                rgba(255,255,255,0.1);
+
+        }
+
+
+        .total {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* PAY BUTTON */
+
+        .pay-btn {
+
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: linear-gradient(
+                135deg,
+                #e44796,
+                #7c3aed
+            );
+
+        }
+
+
+        .secure {
+
+            text-align: center;
+
+            margin-top: 15px;
+
+            color: #cfc0d2;
+
+            font-size: 13px;
+
+        }
+
+
+        @media(max-width:750px) {
+
+            .payment-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .header {
+
+                padding: 20px 4%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            AURAFIT
+        </div>
+
+        <a
+            href="cart-product.html"
+            class="back">
+
+            ← Back to Cart
+
+        </a>
+
+    </header>
+
+
+
+    <!-- PAYMENT -->
+
+    <main class="payment-container">
+
+
+        <!-- LEFT -->
+
+        <section class="payment-box">
+
+            <h1>
+                Choose Payment Method
+            </h1>
+
+
+            <!-- UPI -->
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="upi"
+                    onchange="showPayment('upi')">
+
+                <span class="payment-icon">
+                    📱
+                </span>
+
+                <strong>
+                    UPI
+                </strong>
+
+            </label>
+
+
+            <div
+                id="upi"
+                class="details">
+
+                <input
+                    type="text"
+                    placeholder="Enter UPI ID">
+
+            </div>
+
+
+
+            <!-- CARD -->
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="card"
+                    onchange="showPayment('card')">
+
+                <span class="payment-icon">
+                    💳
+                </span>
+
+                <strong>
+                    Credit / Debit Card
+                </strong>
+
+            </label>
+
+
+            <div
+                id="card"
+                class="details">
+
+                <input
+                    type="text"
+                    placeholder="Card Number">
+
+                <input
+                    type="text"
+                    placeholder="Name on Card">
+
+                <div class="small-inputs">
+
+                    <input
+                        type="text"
+                        placeholder="MM / YY">
+
+                    <input
+                        type="text"
+                        placeholder="CVV">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COD -->
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="cod"
+                    onchange="showPayment('cod')">
+
+                <span class="payment-icon">
+                    💵
+                </span>
+
+                <strong>
+                    Cash on Delivery
+                </strong>
+
+            </label>
+
+
+            <div
+                id="cod"
+                class="details">
+
+                <p>
+                    Pay when your AuraFit order is delivered.
+                </p>
+
+            </div>
+
+
+            <button
+                class="pay-btn"
+                onclick="makePayment()">
+
+                CONTINUE TO PAY
+
+            </button>
+
+
+            <p class="secure">
+                🔒 Secure payment experience
+            </p>
+
+        </section>
+
+
+
+        <!-- RIGHT -->
+
+        <section class="summary-box">
+
+            <h2>
+                Order Summary
+            </h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Product Total
+                </span>
+
+                <span id="productTotal">
+                    ₹0
+                </span>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Delivery
+                </span>
+
+                <span>
+                    FREE
+                </span>
+
+            </div>
+
+
+            <div class="total">
+
+                <span>
+                    Total
+                </span>
+
+                <span id="finalTotal">
+                    ₹0
+                </span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <script>
+
+        /* PAYMENT DETAILS */
+
+        function showPayment(type) {
+
+            document
+                .querySelectorAll(".details")
+                .forEach(function(box) {
+
+                    box.classList.remove("active");
+
+                });
+
+
+            document
+                .getElementById(type)
+                .classList.add("active");
+
+        }
+
+
+
+        /* GET CART TOTAL */
+
+        function calculateTotal() {
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cartProducts")
+                ) || [];
+
+
+            let total = 0;
+
+
+            cart.forEach(function(product) {
+
+                let price =
+                    parseFloat(
+                        String(product.price)
+                            .replace("₹", "")
+                            .replace(",", "")
+                    ) || 0;
+
+
+                let quantity =
+                    Number(product.quantity) || 1;
+
+
+                total += price * quantity;
+
+            });
+
+
+            document.getElementById(
+                "productTotal"
+            ).innerText =
+                "₹" + total.toLocaleString("en-IN");
+
+
+            document.getElementById(
+                "finalTotal"
+            ).innerText =
+                "₹" + total.toLocaleString("en-IN");
+
+        }
+
+
+        /* PAYMENT */
+
+        function makePayment() {
+
+            const selected =
+                document.querySelector(
+                    'input[name="payment"]:checked'
+                );
+
+
+            if (!selected) {
+
+                alert(
+                    "Please select a payment method."
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                "✅ Payment method selected!"
+            );
+
+            window.location.href =
+                "order.html";
+
+        }
+
+
+        function calculateTotal() {
+
+    let buyNowProduct =
+        JSON.parse(localStorage.getItem("buyNowProduct"));
+
+    if (buyNowProduct) {
+
+        let price = parseFloat(
+            String(buyNowProduct.price)
+                .replace("₹", "")
+                .replace(",", "")
+        ) || 0;
+
+        let quantity =
+            Number(buyNowProduct.quantity) || 1;
+
+        let total = price * quantity;
+
+        document.getElementById("totalAmount").innerText =
+            "₹" + total.toLocaleString("en-IN");
+
+        return;
+    }
+
+    // Normal cart checkout
+    let cart =
+        JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+    let total = 0;
+
+    cart.forEach(product => {
+
+        let price = parseFloat(
+            String(product.price)
+                .replace("₹", "")
+                .replace(",", "")
+        ) || 0;
+
+        let quantity =
+            Number(product.quantity) || 1;
+
+        total += price * quantity;
+    });
+
+    document.getElementById("totalAmount").innerText =
+        "₹" + total.toLocaleString("en-IN");
+}
+
+    </script>
+
+
+</body>
+
+</html>

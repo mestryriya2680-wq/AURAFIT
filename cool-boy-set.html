@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit | Cool Boy Set</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+        radial-gradient(circle at 10% 15%,#ccecff,transparent 30%),
+        radial-gradient(circle at 90% 80%,#d9d2ff,transparent 30%),
+        linear-gradient(135deg,#edf9ff,#e9ddff,#fff0f7);
+
+    color:#403451;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    height:72px;
+    padding:0 45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(255,255,255,0.70);
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 5px 20px rgba(60,50,100,0.12);
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#493b72;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#4d4263;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#5b82d6;
+}
+
+.nav-icons{
+    display:flex;
+    gap:18px;
+}
+
+.nav-icons a{
+    text-decoration:none;
+    font-size:22px;
+}
+
+
+/* MAIN */
+
+.container{
+    width:90%;
+    max-width:1050px;
+
+    margin:50px auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:45px;
+}
+
+
+/* IMAGE */
+
+.image-box{
+    background:rgba(255,255,255,0.70);
+
+    padding:25px;
+
+    border-radius:30px;
+
+    box-shadow:0 18px 40px rgba(70,70,120,0.16);
+
+    text-align:center;
+}
+
+.image-box img{
+    width:100%;
+    max-width:430px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+}
+
+
+/* DETAILS */
+
+.details{
+    background:rgba(255,255,255,0.75);
+
+    padding:35px;
+
+    border-radius:30px;
+
+    box-shadow:0 18px 40px rgba(70,70,120,0.15);
+
+    backdrop-filter:blur(15px);
+}
+
+.details h1{
+    font-size:35px;
+
+    color:#493b72;
+
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:27px;
+
+    font-weight:bold;
+
+    color:#517bc7;
+
+    margin-bottom:18px;
+}
+
+.description{
+    color:#665b76;
+
+    line-height:1.6;
+
+    margin-bottom:20px;
+}
+
+.info{
+    line-height:1.9;
+
+    margin:15px 0;
+}
+
+
+/* QUANTITY */
+
+.quantity{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:25px 0;
+}
+
+.quantity button{
+    width:36px;
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#638bd4;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+.quantity span{
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+}
+
+.buttons button{
+    width:100%;
+
+    padding:15px;
+
+    border-radius:25px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.cart-btn{
+    background:white;
+
+    color:#4f72b5;
+
+    border:2px solid #7192d0;
+}
+
+.buy-btn{
+    border:none;
+
+    background:linear-gradient(
+        135deg,
+        #638bd4,
+        #8666c9
+    );
+
+    color:white;
+}
+
+.buttons button:hover{
+    transform:scale(1.02);
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .navbar{
+        padding:0 18px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .container{
+        grid-template-columns:1fr;
+
+        width:92%;
+
+        margin:30px auto;
+    }
+
+    .image-box img{
+        height:420px;
+    }
+
+    .details h1{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="logo">
+        AuraFit ✦
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="women.html">Women</a>
+
+        <a href="men.html">Men</a>
+
+        <a href="kids-product.html">Kids</a>
+
+    </div>
+
+
+    <div class="nav-icons">
+
+        <a href="my-profile.html">👤</a>
+
+        <a href="cart-product.html">🛒</a>
+
+    </div>
+
+</div>
+
+
+
+<!-- PRODUCT -->
+
+<div class="container">
+
+
+    <!-- IMAGE -->
+
+    <div class="image-box">
+
+        <img
+            id="productImage"
+            src="cool-boy-set.jpg"
+            alt="Cool Boy Set"
+        >
+
+    </div>
+
+
+
+    <!-- DETAILS -->
+
+    <div class="details">
+
+        <h1 id="productName">
+            Cool Boy Set
+        </h1>
+
+
+        <div class="price"
+             id="productPrice">
+
+            ₹1199
+
+        </div>
+
+
+        <p class="description">
+
+            Stylish and comfortable shirt and trouser
+            set for boys. Perfect for parties, outings
+            and special occasions.
+
+        </p>
+
+
+        <div class="info">
+
+            👕 Comfortable Shirt <br>
+
+            👖 Matching Trouser <br>
+
+            ✨ Trendy Stylish Look <br>
+
+            💙 Soft & Comfortable Fabric <br>
+
+            🎉 Perfect for Parties & Outings <br>
+
+            🔄 Easy Return Available
+
+        </div>
+
+
+
+        <!-- QUANTITY -->
+
+        <div class="quantity">
+
+            <button onclick="decreaseQty()">
+                −
+            </button>
+
+
+            <span id="quantity">
+                1
+            </span>
+
+
+            <button onclick="increaseQty()">
+                +
+            </button>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button
+                class="cart-btn"
+                onclick="addToCart()">
+
+                🛒 ADD TO CART
+
+            </button>
+
+
+            <button
+                class="buy-btn"
+                onclick="buyNow()">
+
+                ⚡ BUY NOW
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* QUANTITY */
+
+let quantity = 1;
+
+
+function increaseQty(){
+
+    quantity++;
+
+    document.getElementById("quantity")
+        .innerText = quantity;
+
+}
+
+
+function decreaseQty(){
+
+    if(quantity > 1){
+
+        quantity--;
+
+    }
+
+    document.getElementById("quantity")
+        .innerText = quantity;
+
+}
+
+
+
+/* ADD TO CART */
+
+function addToCart(){
+
+    const name =
+        document.getElementById("productName")
+        .innerText.trim();
+
+
+    const price =
+        document.getElementById("productPrice")
+        .innerText.trim();
+
+
+    const image =
+        document.getElementById("productImage")
+        .src;
+
+
+    let cart =
+        JSON.parse(
+            localStorage.getItem("cartProducts")
+        ) || [];
+
+
+    const existingProduct =
+        cart.find(
+            item => item.name === name
+        );
+
+
+    if(existingProduct){
+
+        existingProduct.quantity =
+            (existingProduct.quantity || 1)
+            + quantity;
+
+    }
+
+    else{
+
+        cart.push({
+
+            name:name,
+
+            price:price,
+
+            image:image,
+
+            quantity:quantity
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cartProducts",
+        JSON.stringify(cart)
+    );
+
+
+    alert("🛒 Product Added to Cart!");
+
+}
+
+
+
+/* BUY NOW */
+
+function buyNow(){
+
+    const name =
+        document.getElementById("productName")
+        .innerText.trim();
+
+
+    const price =
+        document.getElementById("productPrice")
+        .innerText.trim();
+
+
+    const image =
+        document.getElementById("productImage")
+        .src;
+
+
+    const product = {
+
+        name:name,
+
+        price:price,
+
+        image:image,
+
+        quantity:quantity
+
+    };
+
+
+    localStorage.setItem(
+        "buyNowProduct",
+        JSON.stringify(product)
+    );
+
+
+    window.location.href =
+        "payment.html";
+
+}
+
+</script>
+
+
+</body>
+</html>

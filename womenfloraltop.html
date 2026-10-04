@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraFit - Floral Tops</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff1f5;
+    color:#333;
+}
+
+nav{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+nav a:hover{color:#a83252;}
+
+.collection-header{
+    text-align:center;
+    padding:65px 20px 50px;
+    background:linear-gradient(135deg,#f8d9e2,#f3c4d0);
+}
+
+.collection-header p{
+    color:#a83252;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.collection-header h1{
+    font-size:46px;
+    letter-spacing:2px;
+    margin:15px 0;
+    color:#6f263b;
+}
+
+.collection-header span{
+    color:#704854;
+    font-size:16px;
+}
+
+.products{
+    width:100%;
+    padding:60px 6%;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.product{
+    background:white;
+    transition:.3s;
+}
+
+.product:hover{transform:translateY(-6px);}
+
+.product-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.product-image{
+    position:relative;
+    width:100%;
+    height:360px;
+    overflow:hidden;
+    background:#f5dfe6;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.heart{
+    position:absolute;
+    right:15px;
+    top:15px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    font-size:23px;
+    cursor:pointer;
+    z-index:5;
+}
+
+.heart:hover{color:#a83252;}
+
+.product-info{
+    padding:18px 15px 22px;
+}
+
+.product-info h3{
+    font-size:19px;
+    margin:0 0 8px;
+    color:#6f263b;
+}
+
+.product-info p{
+    color:#777;
+    font-size:14px;
+    margin:0 0 12px;
+    line-height:1.5;
+}
+
+.price{
+    font-size:19px;
+    font-weight:bold;
+    color:#a83252;
+    margin:12px 0;
+}
+
+.cart-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    background:#a83252;
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+.cart-btn:hover{background:#7d263f;}
+
+@media(max-width:1000px){
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:600px){
+    nav{
+        gap:15px;
+        padding:15px;
+        flex-wrap:wrap;
+    }
+
+    .collection-header h1{font-size:35px;}
+
+    .product-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="mens.html">MEN</a>
+    <a href="womens.html">WOMEN</a>
+    <a href="kids.html">KIDS</a>
+    <a href="aurapicks.html">AURA PICKS</a>
+    <a href="style-studio.html">STYLE STUDIO</a>
+</nav>
+
+<section class="collection-header">
+    <p>AURAFIT WOMEN</p>
+    <h1>FLORAL TOPS</h1>
+    <span>Fresh floral prints for a beautiful everyday look</span>
+</section>
+
+<section class="products">
+
+<div class="product-grid">
+
+<!-- 1 -->
+<div class="product">
+<a href="product-details.html?category=floral-top&product=1" class="product-link">
+<div class="product-image">
+<img src="images/ft.jpg.jpg" alt="Floral Puff Sleeve Top">
+<button class="heart" onclick="event.preventDefault();">♡</button>
+</div>
+<div class="product-info">
+<h3>Floral Puff Sleeve Top</h3>
+<p>Pretty floral top with stylish puff sleeves.</p>
+<div class="price">₹699</div>
+</div>
+</a>
+<button class="cart-btn" onclick="addToCart('Floral Puff Sleeve Top')">
+ADD TO CART
+</button>
+</div>
+
+<!-- 2 -->
+<div class="product">
+<a href="product-details.html?category=floral-top&product=2" class="product-link">
+<div class="product-image">
+<img src="images/ft2.jpg.jpg" alt="Floral Peplum Top">
+<button class="heart" onclick="event.preventDefault();">♡</button>
+</div>
+<div class="product-info">
+<h3>Floral Peplum Top</h3>
+<p>Elegant floral print with a stylish peplum shape.</p>
+<div class="price">₹749</div>
+</div>
+</a>
+<button class="cart-btn" onclick="addToCart('Floral Peplum Top')">
+ADD TO CART
+</button>
+</div>
+
+<!-- 3 -->
+<div class="product">
+<a href="product-details.html?category=floral-top&product=3" class="product-link">
+<div class="product-image">
+<img src="images/ft3.jpg.jpg" alt="Floral Wrap Top">
+<button class="heart" onclick="event.preventDefault();">♡</button>
+</div>
+<div class="product-info">
+<h3>Floral Wrap Top</h3>
+<p>Chic wrap-style top with a delicate floral print.</p>
+<div class="price">₹799</div>
+</div>
+</a>
+<button class="cart-btn" onclick="addToCart('Floral Wrap Top')">
+ADD TO CART
+</button>
+</div>
+
+<!-- 4 -->
+<div class="product">
+<a href="product-details.html?category=floral-top&product=4" class="product-link">
+<div class="product-image">
+<img src="images/ft4.jpg.jpg" alt="Floral Off Shoulder Top">
+<button class="heart" onclick="event.preventDefault();">♡</button>
+</div>
+<div class="product-info">
+<h3>Floral Off Shoulder Top</h3>
+<p>Trendy floral top with a stylish off-shoulder design.</p>
+<div class="price">₹849</div>
+</div>
+</a>
+<button class="cart-btn" onclick="addToCart('Floral Off Shoulder Top')">
+ADD TO CART
+</button>
+</div>
+
+<!-- 5 -->
+<div class="product">
+<a href="product-details.html?category=floral-top&product=5" class="product-link">
+<div class="product-image">
+<img src="images/ft5.jpg.jpg" alt="Floral Ruffle Top">
+<button class="heart" onclick="event.preventDefault();">♡</button>
+</div>
+<div class="product-info">
+<h3>Floral Ruffle Top</h3>
+<p>Feminine floral top with beautiful ruffle detailing.</p>
+<div class="price">₹899</div>
+</div>
+</a>
+<button class="cart-btn" onclick="addToCart('Floral Ruffle Top')">
+ADD TO CART
+</button>
+</div>
+
+</div>
+</section>
+
+<script>
+function addToCart(productName){
+    alert(productName + " added to cart!");
+}
+</script>
+
+</body>
+</html>

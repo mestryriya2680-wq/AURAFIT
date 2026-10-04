@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AURAFIT - Product Details</title>
+
+<style>
+
+/* ===== AURAFIT PRODUCT DETAILS FINAL LAYOUT ===== */
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #211D29, #352536, #422B3B);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main Product Layout */
+.product-detail-page {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center;
+    gap: 55px;
+    max-width: 1250px;
+    width: 92%;
+    margin: 35px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Image Left Side */
+.product-image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#productImage {
+    width: 100%;
+    max-width: 540px;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 18px;
+    background: #F5F0EE;
+}
+
+/* Details Right Side */
+.product-info {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.brand {
+    color: #DDAFCB;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+#productName {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+#productDescription {
+    color: #D5C8D5;
+    line-height: 1.8;
+}
+
+#productPrice {
+    color: #F3C5DA;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Size Buttons */
+.size-btn,
+.size-options button {
+    background: #F5EAF0;
+    color: #30212D;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Quantity */
+.quantity button {
+    background: #76527D;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Add to Cart */
+.add-cart,
+.add-to-cart {
+    background: linear-gradient(135deg, #e879b0, #c65391);
+    color: white;
+    border: 1px solid #f3a5cc;
+    padding: 16px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 18px rgba(210,82, 151, 0.25);
+    transition: 0.3s ease;
+}
+
+/* Buy Now */
+.buy-now {
+    background: linear-gradient(135deg, #F7C1D9, #E78BB8);
+    color: #422438;
+    border: 1px solid #FFD5E7;
+    padding: 16px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 18px rgba(231, 139, 184, 0.2);
+    transition: 0.3s ease;
+}
+
+.add-cart:hover,
+.add-to-cart:hover,
+.buy-now:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(230, 120, 176, 0.35);
+}
+
+/* Navbar */
+nav,
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #19171F;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav a,
+.navbar a {
+    color: #FFFFFF !important;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .product-detail-page {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    #productImage {
+        height: 400px;
+    }
+
+    #productName {
+        font-size: 27px;
+    }
+
+    nav,
+    .navbar {
+        flex-wrap: wrap;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <a href="home.html">HOME</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="mens.html">MEN</a>
+
+    <a href="womens.html">WOMEN</a>
+
+    <a href="kids.html">KIDS</a>
+
+    <a href="aurapicks.html">AURA PICKS</a>
+
+    <a href="style-studio.html">STYLE STUDIO</a>
+
+</nav>
+
+
+<!-- BACK -->
+
+<a href="javascript:history.back()" class="back">
+    ← BACK TO PRODUCTS
+</a>
+
+
+<!-- PRODUCT -->
+
+<section class="product-detail-page">
+
+
+    <!-- IMAGE -->
+
+    <div class="product-image-box">
+
+        <img id="productImage" src="" alt="Product">
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="detail-info">
+
+        <div class="brand">
+            AURAFIT
+        </div>
+
+
+        <h1 id="productName">
+            Casual Shirt
+        </h1>
+
+
+        <p class="description" id="productDescription">
+            Premium AuraFit casual shirt designed for comfort,
+            quality and everyday style.
+        </p>
+
+
+        <div class="price" id="productPrice">
+            ₹799
+        </div>
+
+
+        <!-- SIZE -->
+
+        <div class="size-title">
+            SELECT SIZE
+        </div>
+
+        <div class="sizes">
+
+            <button class="size-btn" onclick="selectSize(this)">
+                S
+            </button>
+
+            <button class="size-btn" onclick="selectSize(this)">
+                M
+            </button>
+
+            <button class="size-btn" onclick="selectSize(this)">
+                L
+            </button>
+
+            <button class="size-btn" onclick="selectSize(this)">
+                XL
+            </button>
+
+        </div>
+
+
+        <!-- QUANTITY -->
+
+        <div class="quantity-title">
+            QUANTITY
+        </div>
+
+        <div class="quantity">
+
+            <button onclick="decreaseQty()">
+                −
+            </button>
+
+            <span id="quantity">
+                1
+            </span>
+
+            <button onclick="increaseQty()">
+                +
+            </button>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <button class="cart-btn" onclick="addToCart()">
+            ADD TO CART
+        </button>
+
+
+        <button class="buy-btn" onclick="buyNow()">
+            BUY NOW
+        </button>
+
+
+        <!-- EXTRA INFORMATION -->
+
+        <div class="extra-info">
+
+            <p>
+                ✓ Premium quality fabric
+            </p>
+
+            <p>
+                ✓ Comfortable everyday wear
+            </p>
+
+            <p>
+                ✓ Easy returns available
+            </p>
+
+            <p>
+                ✓ Secure shopping with AuraFit
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* GET URL INFORMATION */
+
+const params = new URLSearchParams(
+    window.location.search
+);
+
+const category = params.get("category");
+
+const product = params.get("product");
+
+
+/* CASUAL SHIRT IMAGES */
+
+const casualImages = {
+
+    "1": "images/shirt1.jpg.jpg",
+
+    "2": "images/shirt2.jpg.jpg",
+
+    "3": "images/shirt3.jpg.jpg",
+
+    "4": "images/shirt4.jpg.jpg",
+
+    "5": "images/shirt5.jpg.jpg",
+
+    "6": "images/shirt6.jpg.jpg",
+
+    "7": "images/shirt7.jpg.jpg",
+
+    "8": "images/shirt8.jpg.jpg",
+
+    "9": "images/shirt9.jpg.jpg"
+
+
+};
+
+
+/* CASUAL SHIRT DETAILS */
+
+const casualProducts = {
+
+    "1": {
+        name: "Classic Casual Shirt",
+        description: "Premium AuraFit casual shirt designed for comfort, quality and everyday style.",
+        price: "₹799"
+    },
+
+    "2": {
+        name: "classic casual shirt",
+        description: "Smart and comfortable casual shirt perfect for everyday fashion.",
+        price: "₹849"
+    },
+
+    "3": {
+        name: "slim casual shirt",
+        description: "Premium quality casual shirt with a modern and stylish look.",
+        price: "₹899"
+    },
+
+    "4": {
+        name: "Premium casual Shirt",
+        description: "Comfortable everyday shirt designed for a clean and effortless style.",
+        price: "₹749"
+    },
+
+    "5": {
+        name: "everday casual shirt",
+        description: "Soft cotton casual shirt made for comfortable everyday wear.",
+        price: "₹949"
+    },
+
+    "6": {
+        name: " Premium Casual Shirt",
+        description: "Modern casual shirt with a simple and stylish AuraFit design.",
+        price: "₹849"
+    },
+
+    "7": {
+        name: "modern Casual Shirt",
+        description: "Relaxed casual shirt perfect for weekends and outings.",
+        price: "₹799"
+    },
+
+    "8": {
+        name: "weekend Casual Shirt",
+        description: "Trendy weekend  shirt designed for a modern everyday look.",
+        price: "₹899"
+    },
+ 
+     "9": {
+        name: "urban casual shirt",
+        description: "Trendy urban casual shirt designed for a modern everyday look.",
+        price: "₹999"
+    }
+
+
+};
+
+
+/* SHOW PRODUCT */
+
+if(category === "casual-shirt"){
+
+    const imagePath = casualImages[product];
+
+    const productData = casualProducts[product];
+
+
+    if(imagePath){
+
+        document.getElementById("productImage").src =
+            imagePath;
+
+    }
+
+
+    if(productData){
+
+        document.getElementById("productName").textContent =
+            productData.name;
+
+        document.getElementById("productDescription").textContent =
+            productData.description;
+
+        document.getElementById("productPrice").textContent =
+            productData.price;
+
+    }
+
+}
+
+
+/* QUANTITY */
+
+let qty = 1;
+
+
+function increaseQty(){
+
+    qty++;
+
+    document.getElementById("quantity").textContent = qty;
+
+}
+
+
+function decreaseQty(){
+
+    if(qty > 1){
+
+        qty--;
+
+        document.getElementById("quantity").textContent = qty;
+
+    }
+
+}
+
+
+/* SIZE */
+
+let selectedSize = "";
+
+
+function selectSize(button){
+
+    selectedSize = button.textContent;
+
+    const buttons =
+        document.querySelectorAll(".size-btn");
+
+    buttons.forEach(function(btn){
+
+        btn.style.background = "white";
+
+        btn.style.color = "#222";
+
+    });
+
+
+    button.style.background = "#7d459b";
+
+    button.style.color = "white";
+
+}
+
+
+/* ADD CART */
+
+function addToCart(){
+
+    if(selectedSize === ""){
+
+        alert("Please select a size.");
+
+        return;
+
+    }
+
+
+    alert(
+        "Product added to cart!\nSize: "
+        + selectedSize
+        + "\nQuantity: "
+        + qty
+    );
+
+}
+
+
+/* BUY NOW */
+
+function buyNow(){
+
+    if(selectedSize === ""){
+
+        alert("Please select a size.");
+
+        return;
+
+    }
+
+
+    alert(
+        "Thank you for shopping with AuraFit!\n"
+        + "Size: "
+        + selectedSize
+        + "\nQuantity: "
+        + qty
+    );
+
+}
+
+</script>
+
+<script>
+
+
+
+/* ===============================
+   PRINTED SHIRT IMAGES
+================================ */
+
+const printedImages = {
+
+    "1": "images/prishirt1.jpg.jpg",
+    "2": "images/prishirt2.jpg.jpg",
+    "3": "images/prishirt3.jpg.jpg",
+    "4": "images/prishirt4.jpg.jpg",
+    "5": "images/prishirt5.jpg.jpg",
+    "6": "images/prishirt6.jpg.jpg",
+    "7": "images/prishirt7.jpg.jpg",
+    "8": "images/prishirt8.jpg.jpg"
+
+};
+
+
+/* ===============================
+   PRINTED SHIRT PRODUCTS
+================================ */
+
+const printedProducts = {
+
+    "1": {
+        name: "Floral Printed Shirt",
+        description: "Stylish floral printed shirt perfect for casual and everyday wear.",
+        price: "₹849"
+    },
+
+    "2": {
+        name: "Tropical Printed Shirt",
+        description: "Trendy tropical printed shirt designed for a fresh and relaxed look.",
+        price: "₹899"
+    },
+
+    "3": {
+        name: "Geometric Printed Shirt",
+        description: "Modern geometric printed shirt with a smart and stylish look.",
+        price: "₹949"
+    },
+
+    "4": {
+        name: "Abstract Printed Shirt",
+        description: "Unique abstract printed shirt designed for a modern fashion look.",
+        price: "₹999"
+    },
+
+    "5": {
+        name: "Leaf Printed Shirt",
+        description: "Comfortable leaf printed shirt perfect for casual outings.",
+        price: "₹879"
+    },
+
+    "6": {
+        name: "Minimal Printed Shirt",
+        description: "Simple and stylish printed shirt for an elegant everyday look.",
+        price: "₹829"
+    },
+
+    "7": {
+        name: "Stripe Printed Shirt",
+        description: "Classic stripe printed shirt with a clean and trendy style.",
+        price: "₹899"
+    },
+
+    "8": {
+        name: "Modern Printed Shirt",
+        description: "Trendy modern printed shirt designed for a stylish everyday look.",
+        price: "₹949"
+    }
+
+};
+
+
+/* ===============================
+   SHOW PRINTED SHIRT PRODUCT
+================================ */
+
+if(category === "printed-shirt") {
+
+    const imagePath = printedImages[product];
+
+    const productData = printedProducts[product];
+
+
+    if(imagePath) {
+
+        document.getElementById("productImage").src = imagePath;
+
+    }
+
+
+    if(productData) {
+
+        document.getElementById("productName").textContent =
+            productData.name;
+
+        document.getElementById("productDescription").textContent =
+            productData.description;
+
+        document.getElementById("productPrice").textContent =
+            productData.price;
+
+    }
+
+}
+
+</script>
+
+<script>
+
+/* ===============================
+   LINEN SHIRT IMAGES
+================================ */
+
+const linenImages = {
+
+    "1": "images/linen1.jpg.jpg",
+    "2": "images/linen2.jpg.jpg",
+    "3": "images/linen3.jpg.jpg",
+    "4": "images/linen4.jpg.jpg",
+    "5": "images/linen5.jpg.jpg",
+    "6": "images/linen6.jpg.jpg",
+    "7": "images/linen7.jpg.jpg",
+    "8": "images/linen8.jpg.jpg"
+
+};
+
+
+/* ===============================
+   LINEN SHIRT PRODUCTS
+================================ */
+
+const linenProducts = {
+
+    "1": {
+        name: "Classic Linen Shirt",
+        description: "Comfortable classic linen shirt perfect for everyday wear.",
+        price: "₹999"
+    },
+
+    "2": {
+        name: "Relaxed Linen Shirt",
+        description: "Relaxed linen shirt designed for a comfortable and stylish look.",
+        price: "₹1099"
+    },
+
+    "3": {
+        name: "Premium Linen Shirt",
+        description: "Premium quality linen shirt with a clean and elegant style.",
+        price: "₹1199"
+    },
+
+    "4": {
+        name: "Summer Linen Shirt",
+        description: "Lightweight linen shirt perfect for a fresh summer look.",
+        price: "₹949"
+    },
+
+    "5": {
+        name: "Classic White Linen Shirt",
+        description: "Classic white linen shirt designed for a simple and elegant look.",
+        price: "₹999"
+    },
+
+    "6": {
+        name: "Casual Linen Shirt",
+        description: "Stylish casual linen shirt perfect for everyday outings.",
+        price: "₹1049"
+    },
+
+    "7": {
+        name: "Modern Linen Shirt",
+        description: "Modern linen shirt designed for a smart and effortless look.",
+        price: "₹1149"
+    },
+
+    "8": {
+        name: "Premium Summer Linen Shirt",
+        description: "Premium summer linen shirt with a lightweight and stylish design.",
+        price: "₹1249"
+    }
+
+};
+
+
+/* ===============================
+   SHOW LINEN SHIRT PRODUCT
+================================ */
+
+if(category === "linen-shirt") {
+
+    const imagePath = linenImages[product];
+    const productData = linenProducts[product];
+
+
+    if(imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+
+    if(productData) {
+
+        document.getElementById("productName").textContent =
+            productData.name;
+
+        document.getElementById("productDescription").textContent =
+            productData.description;
+
+        document.getElementById("productPrice").textContent =
+            productData.price;
+
+    }
+
+}
+
+</script>
+<script>
+
+/* ===============================
+   FORMAL SHIRT IMAGES
+================================ */
+
+const formalImages = {
+
+    "1": "images/formal1.jpg.jpg",
+    "2": "images/formal2.jpg.jpg",
+    "3": "images/formal3.jpg.jpg",
+    "4": "images/formal4.jpg.jpg",
+    "5": "images/formal5.jpg.jpg",
+    
+
+};
+
+
+/* ===============================
+   FORMAL SHIRT PRODUCTS
+================================ */
+
+const formalProducts = {
+
+    "1": {
+        name: "Classic Formal Shirt",
+        description: "Classic formal shirt designed for a clean and professional look.",
+        price: "₹899"
+    },
+
+    "2": {
+        name: "Slim Fit Formal Shirt",
+        description: "Smart slim fit formal shirt perfect for office and professional wear.",
+        price: "₹999"
+    },
+
+    "3": {
+        name: "Premium Formal Shirt",
+        description: "Premium formal shirt with a sophisticated and elegant design.",
+        price: "₹1099"
+    },
+
+    "4": {
+        name: "Office Formal Shirt",
+        description: "Comfortable office formal shirt designed for everyday professional wear.",
+        price: "₹949"
+    },
+
+    "5": {
+        name: "Business Formal Shirt",
+        description: "Stylish business formal shirt perfect for meetings and professional occasions.",
+        price: "₹1199"
+    }
+
+    
+
+};
+
+
+/* ====================================
+   BASIC TSHIRT IMAGES
+==================================== */
+
+const basicTshirtImages = {
+    "1": "images/bas1.jpg.jpg",
+    "2": "images/bas2.jpg.jpg",
+    "3": "images/bas3.jpg.jpg",
+    "4": "images/bas4.jpg.jpg",
+    "5": "images/bas5.jpg.jpg"
+};
+
+/* ====================================
+   BASIC TSHIRT PRODUCTS
+==================================== */
+
+const basicTshirtProducts = {
+    "1": {
+        name: "Classic basic ti-shirt",
+        description: "Comfortable classic basic t-shirt perfect for daily wear.",
+        price: "₹499"
+    },
+    "2": {
+        name: "classic black ti-shirt",
+        description: "Stylish black t-shirt designed for a modern comfortable fit.",
+        price: "₹549"
+    },
+    "3": {
+        name: "classic white T-Shirt",
+        description: "Premium quality white cotton t-shirt with a relaxed vibe.",
+        price: "₹699"
+    },
+    "4": {
+        name: "classic grey T-Shirt",
+        description: "Lightweight and breathable grey t-shirt perfect for casual wear.",
+        price: "₹449"
+    },
+    "5": {
+        name: "Classic neavy blue T-Shirt",
+        description: "neavy blue cotton t-shirt designed for a simple and clean look.",
+        price: "₹499"
+    }
+};
+
+/* ====================================
+   SHOW BASIC TSHIRT PRODUCT
+==================================== */
+
+if (category === "basic-tshirt") {
+
+    const imagePath = basicTshirtImages[product];
+    const productData = basicTshirtProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+
+/* ====================================
+   OVERSIZED TSHIRT IMAGES
+==================================== */
+
+const oversizedTshirtImages = {
+    "1": "images/ov1.jpg.jpg",
+    "2": "images/ov2.jpg.jpg",
+    "3": "images/ov3.jpg.jpg",
+    "4": "images/ov4.jpg.jpg",
+    "5": "images/ov5.jpg.jpg"
+};
+
+/* ====================================
+   OVERSIZED TSHIRT PRODUCTS
+==================================== */
+
+const oversizedTshirtProducts = {
+    "1": {
+        name: "classic Oversized T-Shirt",
+        description: "Comfortable vintage style oversized t-shirt perfect for a trendy streetwear look.",
+        price: "₹699"
+    },
+    "2": {
+        name: "black Oversized T-Shirt",
+        description: "Relaxed drop shoulder t-shirt designed for maximum comfort and style.",
+        price: "₹749"
+    },
+    "3": {
+        name:  " graphic Oversized T-Shirt",
+        description: "Premium quality heavyweight cotton t-shirt with a relaxed loose fit.",
+        price: "₹899"
+    },
+    "4": {
+        name: "premium  Oversized T-Shirt",
+        description: "Trendy printed oversized t-shirt perfect for a casual and modern aesthetic.",
+        price: "₹799"
+    },
+    "5": {
+        name: "urban Oversized T-Shirt",
+        description: "Classic solid color oversized t-shirt designed for a clean and minimalistic look.",
+        price: "₹649"
+    }
+};
+
+/* ====================================
+   SHOW OVERSIZED TSHIRT PRODUCT
+==================================== */
+
+if (category === "oversized-tshirt") {
+
+    const imagePath = oversizedTshirtImages[product];
+    const productData = oversizedTshirtProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+
+/* ====================================
+   GRAPHIC TSHIRT IMAGES
+==================================== */
+
+const graphicTshirtImages = {
+    "1": "images/g1.jpg.jpg",
+    "2": "images/g2.jpg.jpg",
+      "3": "images/g3.jpg.jpg",
+   
+};
+
+/* ====================================
+   GRAPHIC TSHIRT PRODUCTS
+==================================== */
+
+const graphicTshirtProducts = {
+    "1": {
+        name: "urban Graphic T-Shirt",
+        description: "Vibrant anime art printed t-shirt made with soft cotton for daily style.",
+        price: "₹599"
+    },
+    "2": {
+        name: "street graphic T-Shirt",
+        description: "Classic rock band graphic print designed for a cool retro aesthetic.",
+        price: "₹649"
+    },
+    "3": {
+        name: "Abstract Art Graphic T-Shirt",
+        description: "Modern abstract design print perfect for an artistic casual look.",
+        price: "₹549"
+    }
+    
+};
+
+/* ====================================
+   SHOW GRAPHIC TSHIRT PRODUCT
+==================================== */
+
+if (category === "graphic-tshirt") {
+
+    const imagePath = graphicTshirtImages[product];
+    const productData = graphicTshirtProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+/* ====================================
+   POLO TSHIRT IMAGES
+==================================== */
+
+const poloTshirtImages = {
+    "1": "images/polo1.jpg.jpg",
+    "2": "images/polo2.jpg.jpg",
+    "3": "images/polo3.jpg.jpg",
+    "4": "images/polo4.jpg.jpg",
+    "5": "images/polo5.jpg.jpg"
+};
+
+/* ====================================
+   POLO TSHIRT PRODUCTS
+==================================== */
+
+const poloTshirtProducts = {
+    "1": {
+        name: "Classic  Polo T-Shirt",
+        description: "Timeless solid polo t-shirt made with breathable cotton piqué fabric.",
+        price: "₹799"
+    },
+    "2": {
+        name: " premium Polo T-Shirt",
+        description: "Smart striped polo shirt perfect for a semi-formal and casual look.",
+        price: "₹849"
+    },
+    "3": {
+        name: "causual Polo T-Shirt",
+        description: "Modern slim fit polo collar t-shirt with comfortable stretch fabric.",
+        price: "₹899"
+    },
+    "4": {
+        name: "stripted  Polo T-Shirt",
+        description: "Premium textured knit polo t-shirt designed for a sophisticated vibe.",
+        price: "₹999"
+    },
+    "5": {
+        name: "Sport  Polo T-Shirt",
+        description: "Casual polo t-shirt with stylish contrast tipped collar and cuffs.",
+        price: "₹749"
+    }
+};
+
+/* ====================================
+   SHOW POLO TSHIRT PRODUCT
+==================================== */
+
+if (category === "polo-tshirt") {
+
+    const imagePath = poloTshirtImages[product];
+    const productData = poloTshirtProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+/* ====================================
+   KURTA IMAGES
+==================================== */
+
+const kurtaImages = {
+    "1": "images/k1.jpg.jpg",
+    "2": "images/k2.jpg.jpg",
+    "3": "images/k3.jpg.jpg",
+    "4": "images/k4.jpg.jpg",
+    "5": "images/k5.jpg.jpg"
+};
+
+/* ====================================
+   KURTA PRODUCTS
+==================================== */
+
+const kurtaProducts = {
+    "1": {
+        name: "Classic Cotton Short Kurta",
+        description: "Lightweight pure cotton short kurta perfect for casual everyday wear.",
+        price: "₹899"
+    },
+    "2": {
+        name: "Premium Kurta",
+        description: "Elegantly  kurta designed for festive celebrations.",
+        price: "₹1199"
+    },
+    "3": {
+        name: "printed Kurta",
+        description: "P kurta with a mandarin collar for a sophisticated look.",
+        price: "₹1499"
+    },
+    "4": {
+        name: "linen Kurta",
+        description: " kurta with comfortable fit and durable cotton fabric.",
+        price: "₹1299"
+    },
+    "5": {
+        name: "festive Kurta",
+        description: "Stylish embroidered ethnic kurta suitable for weddings and special occasions.",
+        price: "₹3000"
+    }
+};
+
+/* ====================================
+   SHOW KURTA PRODUCT
+==================================== */
+
+if (category === "kurta") {
+
+    const imagePath = kurtaImages[product];
+    const productData = kurtaProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+/* ====================================
+   KURTA PAJAMA IMAGES
+==================================== */
+
+const kurtaPajamaImages = {
+    "1": "images/kj1.jpg.jpg",
+    "2": "images/kj2.jpg.jpg",
+    "3": "images/kj3.jpg.jpg",
+    "4": "images/kj4.jpg.jpg",
+    "5": "images/kj5.jpg.jpg"
+};
+
+/* ====================================
+   KURTA PAJAMA PRODUCTS
+==================================== */
+
+const kurtaPajamaProducts = {
+    "1": {
+        name: "Classic Cotton Kurta Pajama Set",
+        description: "Comfortable pure cotton kurta pajama set ideal for daily and traditional events.",
+        price: "₹1299"
+    },
+    "2": {
+        name: "Festive Silk Blend Kurta Pajama",
+        description: "Elegant silk blend kurta paired with comfortable pajama for festive occasions.",
+        price: "₹1799"
+    },
+    "3": {
+        name: "Embroidered Kurta Pajama Set",
+        description: "Stylish embroidered neck design kurta set perfect for weddings and functions.",
+        price: "₹2199"
+    },
+    "4": {
+        name: "Pathani Kurta Pajama Set",
+        description: "Traditional Pathani style kurta with matching pajama made from durable cotton.",
+        price: "₹1599"
+    },
+    "5": {
+        name: "Designer Jacquard Kurta Pajama",
+        description: "Premium jacquard woven kurta set designed for a rich traditional look.",
+        price: "₹2499"
+    }
+};
+
+/* ====================================
+   SHOW KURTA PAJAMA PRODUCT
+==================================== */
+
+if (category === "kurta-pajama") {
+
+    const imagePath = kurtaPajamaImages[product];
+    const productData = kurtaPajamaProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+/* ====================================
+   NEHRU JACKET IMAGES
+==================================== */
+
+const nehruJacketImages = {
+    "1": "images/n1.jpg.jpg",
+    "2": "images/n2.jpg.jpg",
+    "3": "images/n3.jpg.jpg",
+    "4": "images/n4.jpg.jpg",
+    "5": "images/n5.jpg.jpg"
+};
+
+/* ====================================
+   NEHRU JACKET PRODUCTS
+==================================== */
+
+const nehruJacketProducts = {
+    "1": {
+        name: "Classic Cotton Linen Nehru Jacket",
+        description: "Versatile cotton linen Nehru jacket perfect for pairing with kurtas or shirts.",
+        price: "₹1499"
+    },
+    "2": {
+        name: "Floral Printed Festive Nehru Jacket",
+        description: "Vibrant floral printed jacket designed to elevate your ethnic look for celebrations.",
+        price: "₹1899"
+    },
+    "3": {
+        name: "Textured Silk Blend Nehru Jacket",
+        description: "Premium textured silk blend Nehru jacket suitable for weddings and formal events.",
+        price: "₹2299"
+    },
+    "4": {
+        name: "Sleeveless Khadi Nehru Jacket",
+        description: "Breathable khadi sleeveless jacket offering a smart, traditional, and clean fit.",
+        price: "₹1299"
+    },
+    "5": {
+        name: "Designer Jacquard Nehru Jacket",
+        description: "Rich jacquard woven jacket featuring a mandarin collar and refined finish.",
+        price: "₹2599"
+    }
+};
+
+/* ====================================
+   SHOW NEHRU JACKET PRODUCT
+==================================== */
+
+if (category === "nehru-jacket") {
+
+    const imagePath = nehruJacketImages[product];
+    const productData = nehruJacketProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+
+
+
+
+
+/* ====================================
+   FESTIVE WEAR IMAGES
+==================================== */
+
+const festiveWearImages = {
+    "1": "images/fv1.jpg.jpg",
+    "2": "images/fv2.jpg.jpg",
+    "3": "images/fv3.jpg.jpg",
+    "4": "images/fv4.jpg.jpg",
+    "5": "images/fv5.jpg.jpg"
+};
+
+/* ====================================
+   FESTIVE WEAR PRODUCTS
+==================================== */
+
+const festiveWearProducts = {
+    "1": {
+        name: "Embroidered Kurta Jacket Set",
+        description: "Elegant embroidered kurta paired with a matching jacket for a regal festive look.",
+        price: "₹2999"
+    },
+    "2": {
+        name: "Silk Blend Sherwani Set",
+        description: "Premium silk blend sherwani designed with intricate detailing for major celebrations.",
+        price: "₹4599"
+    },
+    "3": {
+        name: "Indo-Western Festive Outfit",
+        description: "Modern Indo-Western style outfit crafted for weddings and festive functions.",
+        price: "₹3499"
+    },
+    "4": {
+        name: "Traditional Bandhgala Suit",
+        description: "Classic structured Bandhgala suit offering a sophisticated and royal ethnic vibe.",
+        price: "₹3999"
+    },
+   
+};
+
+/* ====================================
+   SHOW FESTIVE WEAR PRODUCT
+==================================== */
+
+if (category === "festive-wear") {
+
+    const imagePath = festiveWearImages[product];
+    const productData = festiveWearProducts[product];
+
+    if (imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+    if (productData) {
+        document.getElementById("productName").textContent = productData.name;
+        document.getElementById("productDescription").textContent = productData.description;
+        document.getElementById("productPrice").textContent = productData.price;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const womenproduct={
+
+    /* ================= WOMEN ================= */
+
+    "floral-dress": {
+        1: {
+            name: "Floral Maxi Dress",
+            price: "₹1199",
+            image: "images/f1.jpg.jpg",
+            description: "Beautiful floral maxi dress for a stylish look."
+        },
+        2: {
+            name: "Floral Midi Dress",
+            price: "₹1099",
+            image: "images/f2.jpg.jpg",
+            description: "Elegant floral midi dress."
+        },
+        3: {
+            name: "Floral Mini Dress",
+            price: "₹999",
+            image: "images/f3.jpg.jpg",
+            description: "Trendy floral mini dress."
+        },
+        4: {
+            name: "Floral Wrap Dress",
+            price: "₹1149",
+            image: "images/f4.jpg.jpg",
+            description: "Stylish floral wrap dress."
+        },
+        5: {
+            name: "Floral A-Line Dress",
+            price: "₹1099",
+            image: "images/f5.jpg.jpg",
+            description: "Beautiful A-line floral dress."
+        }
+    },
+
+ 
+
+    "floral-kurti": {
+        1: {
+            name: "Floral Straight Kurti",
+            price: "₹799",
+            image: "images/floral-kurti-1.jpg",
+            description: "Beautiful floral straight kurti."
+        },
+        2: {
+            name: "Floral Anarkali Kurti",
+            price: "₹899",
+            image: "images/floral-kurti-2.jpg",
+            description: "Elegant floral Anarkali kurti."
+        },
+        3: {
+            name: "Floral A-Line Kurti",
+            price: "₹849",
+            image: "images/floral-kurti-3.jpg",
+            description: "Stylish floral A-line kurti."
+        },
+        4: {
+            name: "Floral Short Kurti",
+            price: "₹699",
+            image: "images/floral-kurti-4.jpg",
+            description: "Trendy short floral kurti."
+        },
+        5: {
+            name: "Floral Long Kurti",
+            price: "₹949",
+            image: "images/floral-kurti-5.jpg",
+            description: "Beautiful long floral kurti."
+        }
+    },
+
+    "printed-kurti": {
+        1: {
+            name: "Floral Printed Kurti",
+            price: "₹799",
+            image: "images/printed-kurti-1.jpg",
+            description: "Trendy floral printed kurti."
+        },
+        2: {
+            name: "Block Print Kurti",
+            price: "₹849",
+            image: "images/printed-kurti-2.jpg",
+            description: "Beautiful block print kurti."
+        },
+        3: {
+            name: "Geometric Print Kurti",
+            price: "₹899",
+            image: "images/printed-kurti-3.jpg",
+            description: "Modern geometric print kurti."
+        },
+        4: {
+            name: "Paisley Print Kurti",
+            price: "₹879",
+            image: "images/printed-kurti-4.jpg",
+            description: "Stylish paisley print kurti."
+        },
+        5: {
+            name: "Ethnic Print Kurti",
+            price: "₹949",
+            image: "images/printed-kurti-5.jpg",
+            description: "Elegant ethnic print kurti."
+        }
+    },
+
+
+"floral-dress": {
+        1: {
+            name: "Floral Maxi Dress",
+            price: "₹1199",
+            image: "images/f1.jpg.jpg",
+            description: "Beautiful floral maxi dress for a stylish look."
+        },
+        2: {
+            name: "Floral Midi Dress",
+            price: "₹1099",
+            image: "images/f2.jpg.jpg",
+            description: "Elegant floral midi dress."
+        },
+        3: {
+            name: "Floral Mini Dress",
+            price: "₹999",
+            image: "images/f3.jpg.jpg",
+            description: "Trendy floral mini dress."
+        },
+        4: {
+            name: "Floral Wrap Dress",
+            price: "₹1149",
+            image: "images/f4.jpg.jpg",
+            description: "Stylish floral wrap dress."
+        },
+        5: {
+            name: "Floral A-Line Dress",
+            price: "₹1099",
+            image: "images/f5.jpg.jpg",
+            description: "Beautiful A-line floral dress."
+        }
+    },
+
+ 
+
+    "floral-kurti": {
+        1: {
+            name: "Floral Straight Kurti",
+            price: "₹799",
+            image: "images/kur1.jpg.jpg",
+            description: "Beautiful floral straight kurti."
+        },
+        2: {
+            name: "Floral Anarkali Kurti",
+            price: "₹899",
+            image: "images/kur2.jpg.jpg",
+            description: "Elegant floral Anarkali kurti."
+        },
+        3: {
+            name: "Floral A-Line Kurti",
+            price: "₹849",
+            image: "images/kur3.jpg.jpg",
+            description: "Stylish floral A-line kurti."
+        },
+        4: {
+            name: "Floral Short Kurti",
+            price: "₹699",
+            image: "images/kur4.jpg.jpg",
+            description: "Trendy short floral kurti."
+        },
+        5: {
+            name: "Floral Long Kurti",
+            price: "₹949",
+            image: "images/kur5.jpg.jpg",
+            description: "Beautiful long floral kurti."
+        }
+    },
+
+
+    
+
+
+
+    "party-wear": {
+        1: {
+            name: "Sequin Party Dress",
+            price: "₹1499",
+            image: "images/par1.jpg.jpg",
+            description: "Stylish sequin party dress designed for a sparkling party look."
+        },
+        2: {
+            name: "Velvet Party Dress",
+            price: "₹1599",
+            image: "images/par2.jpg.jpg",
+            description: "Elegant velvet party dress with a rich and classic style."
+        },
+        3: {
+            name: "Satin Party Dress",
+            price: "₹1399",
+            image: "images/par3.jpg.jpg",
+            description: "Smooth satin party dress with a simple and elegant finish."
+        },
+        4: {
+            name: "Off Shoulder Party Dress",
+            price: "₹1299",
+            image: "images/par4.jpg.jpg",
+            description: "Modern party dress with a stylish off shoulder design."
+        },
+        5: {
+            name: "Ruffle Party Dress",
+            price: "₹1349",
+            image: "images/par5.jpg.jpg",
+            description: "Chic ruffle party dress with a stylish and playful design."
+        }
+   
+    }, 
+
+
+
+    
+    "printed-kurti": {
+        1: {
+            name: "Floral Printed Kurti",
+            price: "₹799",
+            image: "images/pk1.jpg.jpg",
+            description: "Beautiful floral printed kurti with a fresh and elegant design."
+        },
+        2: {
+            name: "Block Print Kurti",
+            price: "₹849",
+            image: "images/pk2.jpg.jpg",
+            description: "Classic block print kurti with a beautiful traditional pattern."
+        },
+        3: {
+            name: "Geometric Print Kurti",
+            price: "₹899",
+            image: "images/pk3.jpg.jpg",
+            description: "Modern geometric print kurti with a stylish everyday look."
+        },
+        4: {
+            name: "Paisley Print Kurti",
+            price: "₹879",
+            image: "images/pk4.jpg.jpg",
+            description: "Elegant paisley print kurti with a classic ethnic style."
+        },
+        5: {
+            name: "Ethnic Print Kurti",
+            price: "₹799",
+            image: "images/pk5.jpg.jpg",
+            description: "Beautiful ethnic print kurti with a simple traditional design."
+        }
+    
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "cotton-kurti": {
+        1: {
+            name: "Cotton Chikankari Kurti",
+            price: "₹899",
+            image: "images/ck1.jpg.jpg",
+            description: "Comfortable cotton Chikankari kurti."
+        },
+        2: {
+            name: "Cotton Kantha Kurti",
+            price: "₹949",
+            image: "images/ck2.jpg.jpg",
+            description: "Beautiful cotton Kantha kurti."
+        },
+        3: {
+            name: "Cotton Embroidered Kurti",
+            price: "₹999",
+            image: "images/ck3.jpg.jpg",
+            description: "Elegant embroidered cotton kurti."
+        },
+        4: {
+            name: "Cotton Tie-Dye Kurti",
+            price: "₹849",
+            image: "images/ck4.jpg.jpg",
+            description: "Trendy cotton tie-dye kurti."
+        },
+        5: {
+            name: "Cotton Handblock Kurti",
+            price: "₹929",
+            image: "images/ck5.jpg.jpg",
+            description: "Beautiful handblock cotton kurti."
+        }
+    },
+
+    "basic-top": {
+       
+        2: {
+            name: "Basic V-Neck Top",
+            price: "₹649",
+            image: "images/ct2.jpg.jpg",
+            description: "Comfortable V-neck top."
+        },
+        3: {
+            name: "Basic Half Sleeve Top",
+            price: "₹699",
+            image: "images/ct3.jpg.jpg",
+            description: "Stylish half sleeve top."
+        },
+        4: {
+            name: "Basic Full Sleeve Top",
+            price: "₹749",
+            image: "images/ct4.jpg.jpg",
+            description: "Comfortable full sleeve top."
+        },
+        5: {
+            name: "Basic Ribbed Top",
+            price: "₹799",
+            image: "images/ct5.jpg.jpg",
+            description: "Trendy ribbed top."
+        }
+    },
+
+    "floral-top": {
+        1: {
+            name: "Floral Puff Sleeve Top",
+            price: "₹699",
+            image: "images/ft1.jpg.jpg",
+            description: "Beautiful floral puff sleeve top."
+        },
+        2: {
+            name: "Floral Peplum Top",
+            price: "₹749",
+            image: "images/ft2.jpg.jpg",
+            description: "Stylish floral peplum top."
+        },
+        3: {
+            name: "Floral Wrap Top",
+            price: "₹799",
+            image: "images/t3.jpg.jpg",
+            description: "Elegant floral wrap top."
+        },
+        4: {
+            name: "Floral Off Shoulder Top",
+            price: "₹849",
+            image: "images/ft4.jpg.jpg",
+            description: "Trendy floral top."
+        },
+        5: {
+            name: "Floral Ruffle Top",
+            price: "₹899",
+            image: "images/ft5.jpg.jpg",
+            description: "Beautiful floral ruffle top."
+        }
+    },
+
+    "oversized ": {
+        1: {
+            name: "Classic Oversized Top",
+            price: "₹699",
+            image: "images/oversized-top-1.jpg",
+            description: "Relaxed oversized top."
+        },
+        2: {
+            name: "Graphic Oversized Top",
+            price: "₹749",
+            image: "images/oversized-top-2.jpg",
+            description: "Trendy graphic oversized top."
+        },
+        3: {
+            name: "Striped Oversized Top",
+            price: "₹799",
+            image: "images/oversized-top-3.jpg",
+            description: "Stylish striped oversized top."
+        },
+        4: {
+            name: "Drop Shoulder Oversized Top",
+            price: "₹849",
+            image: "images/oversized-top-4.jpg",
+            description: "Comfortable drop shoulder top."
+        },
+        5: {
+            name: "Oversized Crop Top",
+            price: "₹899",
+            image: "images/oversized-top-5.jpg",
+            description: "Trendy oversized crop top."
+        }
+    }
+};
+
+/* ===============================
+   SHOW FORMAL SHIRT PRODUCT
+================================ */
+
+if(category === "formal-shirt") {
+
+    const imagePath = formalImages[product];
+    const productData = formalProducts[product];
+
+
+    if(imagePath) {
+        document.getElementById("productImage").src = imagePath;
+    }
+
+
+    if(productData) {
+
+        document.getElementById("productName").textContent =
+            productData.name;
+
+        document.getElementById("productDescription").textContent =
+            productData.description;
+
+        document.getElementById("productPrice").textContent =
+            productData.price;
+
+    }
+
+} 
+
+/* ================= WOMEN PRODUCTS ================= */
+
+if (womenproduct[category] && womenproduct[category][product]) {
+
+    const productData = womenproduct[category][product];
+
+    document.getElementById("productImage").src = productData.image;
+
+    document.getElementById("productName").textContent =
+        productData.name;
+
+    document.getElementById("productDescription").textContent =
+        productData.description;
+
+    document.getElementById("productPrice").textContent =
+        productData.price;
+}
+
+
+function addToCart() {
+
+    // Get product details directly from page
+    const nameElement = document.getElementById("productName");
+    const priceElement = document.getElementById("productPrice");
+    const imageElement = document.getElementById("productImage");
+
+    // Check product details
+    if (!nameElement || !priceElement || !imageElement) {
+        alert("Product details not found!");
+        return;
+    }
+
+    const name = nameElement.innerText.trim();
+    const price = priceElement.innerText.trim();
+    const image = imageElement.src;
+
+    // Get quantity
+    let quantity = 1;
+
+    const quantityElement =
+        document.querySelector(".quantity span");
+
+    if (quantityElement) {
+        quantity = parseInt(quantityElement.innerText) || 1;
+    }
+
+    // Get existing cart
+    let cart =
+        JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+    // Check same product
+    const existingProduct = cart.find(
+        item => item.name === name
+    );
+
+    if (existingProduct) {
+
+        existingProduct.quantity =
+            (existingProduct.quantity || 1) + quantity;
+
+    } else {
+
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: quantity
+        });
+
+    }
+
+    // Save cart
+    localStorage.setItem(
+        "cartProducts",
+        JSON.stringify(cart)
+    );
+
+    alert("🛒 Product Added to Cart!");
+
+}
+
+
+
+function buyNow() {
+
+    const name = document.getElementById("productName").innerText.trim();
+    const price = document.getElementById("productPrice").innerText.trim();
+    const image = document.getElementById("productImage").src;
+
+    let quantity = 1;
+
+    const quantityElement = document.querySelector(".quantity span");
+
+    if (quantityElement) {
+        quantity = parseInt(quantityElement.innerText) || 1;
+    }
+
+    // Product directly for checkout
+    const buyNowProduct = {
+        name: name,
+        price: price,
+        image: image,
+        quantity: quantity
+    };
+
+    localStorage.setItem(
+        "buyNowProduct",
+        JSON.stringify(buyNowProduct)
+    );
+
+    // DIRECT PAYMENT PAGE
+    window.location.href = "payment.html";
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

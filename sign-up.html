@@ -1,0 +1,283 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit | Create Account</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at 20% 20%, #6d315d, transparent 35%),
+    radial-gradient(circle at 80% 80%, #3c2454, transparent 35%),
+    linear-gradient(135deg,#120d18,#241126);
+    color:white;
+    padding:25px;
+}
+
+.signup-container{
+    width:430px;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.logo{
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#efa4d5;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cfc2cf;
+    font-size:12px;
+    margin:7px 0 25px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+.form-group input{
+    width:100%;
+    padding:13px 14px;
+    border:none;
+    outline:none;
+    border-radius:11px;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.12);
+    color:white;
+    font-size:14px;
+}
+
+.form-group input::placeholder{
+    color:#bdb2bd;
+}
+
+.form-group input:focus{
+    border-color:#efa4d5;
+    box-shadow:0 0 10px rgba(239,164,213,0.25);
+}
+
+.terms{
+    font-size:11px;
+    color:#cfc4cf;
+    margin:5px 0 18px;
+}
+
+.terms input{
+    accent-color:#e79acb;
+    margin-right:5px;
+}
+
+.create-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:13px;
+    background:linear-gradient(135deg,#e58bc5,#9655aa);
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.create-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(220,130,190,0.35);
+}
+
+.login-text{
+    text-align:center;
+    margin-top:20px;
+    font-size:13px;
+    color:#d8cbd7;
+}
+
+.login-text a{
+    color:#f0a5d5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#message{
+    text-align:center;
+    margin-top:12px;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="signup-container">
+
+    <div class="logo">
+        Aura<span>Fit</span>
+    </div>
+
+    <div class="subtitle">
+        CREATE YOUR STYLE • CREATE YOUR ACCOUNT
+    </div>
+
+    <form id="signupForm">
+
+        <!-- Full Name -->
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text"
+                   id="fullName"
+                   placeholder="Enter your full name"
+                   required>
+        </div>
+
+        <!-- Username -->
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text"
+                   id="username"
+                   placeholder="Create a username"
+                   required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email"
+                   required>
+        </div>
+
+        <!-- Mobile -->
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel"
+                   id="mobile"
+                   placeholder="Enter your mobile number"
+                   maxlength="10"
+                   required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password"
+                   id="password"
+                   placeholder="Create a password"
+                   required>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password"
+                   id="confirmPassword"
+                   placeholder="Confirm your password"
+                   required>
+        </div>
+
+        <!-- Terms -->
+        <div class="terms">
+            <label>
+                <input type="checkbox" id="terms" required>
+                I agree to the Terms & Conditions
+            </label>
+        </div>
+
+        <!-- Create Account -->
+        <button type="submit" class="create-btn">
+            Create Account ✦
+        </button>
+
+        <p id="message"></p>
+
+    </form>
+
+    <!-- Login -->
+    <div class="login-text">
+        Already have an account?
+        <a href="login.html">Login Here</a>
+    </div>
+
+</div>
+
+
+<script>
+
+document.getElementById("signupForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let fullName = document.getElementById("fullName").value;
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let mobile = document.getElementById("mobile").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let message = document.getElementById("message");
+
+    /* Password check */
+    if(password !== confirmPassword){
+        message.style.color = "#ff9999";
+        message.innerHTML = "Passwords do not match!";
+        return;
+    }
+
+    /* Mobile check */
+    if(mobile.length !== 10 || isNaN(mobile)){
+        message.style.color = "#ff9999";
+        message.innerHTML = "Enter a valid 10-digit mobile number!";
+        return;
+    }
+
+    /* Save account details */
+    localStorage.setItem("auraName", fullName);
+    localStorage.setItem("auraUsername", username);
+    localStorage.setItem("auraEmail", email);
+    localStorage.setItem("auraMobile", mobile);
+    localStorage.setItem("auraPassword", password);
+
+    message.style.color = "#9ff0c0";
+    message.innerHTML = "Account created successfully ✨";
+
+    /* Go to login page */
+    setTimeout(function(){
+        window.location.href = "login.html";
+    }, 1200);
+
+});
+
+</script>
+
+</body>
+</html>

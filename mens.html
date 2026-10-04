@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AuraFit - Men's Collection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+ 
+    
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="home.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="mens.html" class="active">MENS</a>
+        <a href="womens.html">WOMENS</a>
+        <a href="kids.html">KIDS</a>
+        <a href="aurapicks.html">AURAPICKS</a>
+        <a href="style-studio.html">STYLE-STUDIO</a>
+
+    </nav>
+
+    <style>
+
+/* Reset basic spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: rgba(220, 200, 220, 0.4); /* Matches your translucent background tint */
+  backdrop-filter: blur(8px); /* Optional: modern blur effect */
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand/Logo Styling */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+/* Unordered List Container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 28px; /* Generous spacing between menu items */
+}
+
+/* Individual Link Styling */
+.nav-links a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* Animated Hover Line Under Tabs */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+/* Hover & Active States */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #000000;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+.hero-header, 
+.collection-header {
+  text-align: center; /* Centers title and subtitle text */
+  margin: 40px auto;   /* Adds spacing around the block */
+  width: 100%;
+}
+
+.hero-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hero-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+    </style>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+    <div class="hero-content">
+
+       
+        <h1>MEN'S COLLECTION</h1>
+
+        <p>Everyday style. Timeless confidence.</p>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= SHIRTS ================= -->
+
+    <section class="mens-category">
+
+        <div class="category-heading">
+
+            <p>EXPLORE SHIRTS</p>
+
+            <h2>SHIRTS</h2>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/shirt1.jpg.jpg">
+                <h3>Casual Shirts</h3>
+                <p>Relaxed everyday styles</p>
+                <a href="casual-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/prishirt.jpg.jpg">
+                <h3>Printed Shirts</h3>
+                <p>Trendy printed designs</p>
+                <a href="printed-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+               
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/mainlin.jpg.jpg">
+                <h3>Linen Shirts</h3>
+                <p>Light and comfortable</p>
+                <a href="linen-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/formal.jpg.jpg">
+                <h3>Formal Shirts</h3>
+                <p>Smart office styles</p>
+                <a href="formal-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= T-SHIRTS ================= -->
+
+    <section class="mens-category">
+
+        <div class="category-heading">
+
+            <p>EVERYDAY ESSENTIALS</p>
+
+            <h2>T-SHIRTS</h2>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/basictis1.jpg.jpg">
+                <h3>Basic T-Shirts</h3>
+                <p>Simple everyday essentials</p>
+                <a href="basic-tishirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/oversize.jpg.jpg">
+                <h3>Oversized T-Shirts</h3>
+                <p>Relaxed streetwear fit</p>
+                <a href="oversized-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/graphicti.jpg.jpg">
+                <h3>Graphic T-Shirts</h3>
+                <p>Bold and creative prints</p>
+                <a href="graphic-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/poloti.jpg.jpg">
+                <h3>Polo T-Shirts</h3>
+                <p>Classic smart-casual style</p>
+                <a href="polo-shirts.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KURTAS ================= -->
+
+    <section class="mens-category">
+
+        <div class="category-heading">
+
+            <p>TRADITIONAL COLLECTION</p>
+
+            <h2>KURTAS & ETHNIC</h2>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/kurta.jpg.jpg">
+                <h3>Kurta</h3>
+                <p>Classic traditional wear</p>
+                <a href="kurta.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/kurtapaj.jpg.jpg">
+                <h3>Kurta Pajama</h3>
+                <p>Complete ethnic look</p>
+                <a href="kurta-pajama.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/neh.jpg.jpg">
+                <h3>Nehru Jackets</h3>
+                <p>Elegant festive layering</p>
+                <a href="neharu-jacket.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/fes.jpg.jpg">
+                <h3>Festive Wear</h3>
+                <p>Perfect for celebrations</p>
+                <a href="festive-wear.html" class="shop-link">
+    SHOP NOW
+</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+    </section>
+
+
+   
+   
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>AURAFIT</h2>
+
+        <p>Your style. Your aura. Your fashion.</p>
+
+        <p class="copyright">
+            © 2026 AuraFit. All Rights Reserved.
+        </p>
+
+    </footer>
+    
+    
+
+</body>
+
+</html>

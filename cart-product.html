@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AuraFit | My Cart</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            color: white;
+
+            background:
+                radial-gradient(circle at top left, #6d174f, transparent 35%),
+                radial-gradient(circle at bottom right, #38105d, transparent 35%),
+                linear-gradient(135deg, #100812, #210d27, #120917);
+
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .cart-header {
+
+            width: 100%;
+
+            padding: 25px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(0, 0, 0, 0.35);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+
+        }
+
+
+        .logo {
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .cart-title {
+
+            font-size: 24px;
+
+            font-weight: 500;
+
+        }
+
+
+        .continue-btn {
+
+            text-decoration: none;
+
+            color: white;
+
+            padding: 11px 20px;
+
+            border-radius: 25px;
+
+            background: linear-gradient(
+                135deg,
+                #d94691,
+                #7c3aed
+            );
+
+            transition: 0.3s;
+
+        }
+
+
+        .continue-btn:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* ================= MAIN ================= */
+
+        main {
+
+            width: 90%;
+
+            max-width: 1250px;
+
+            margin: 45px auto;
+
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .section-heading h1 {
+
+            font-size: 38px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .section-heading p {
+
+            color: #d6c6d9;
+
+        }
+
+
+        /* ================= PRODUCTS GRID ================= */
+
+        .products-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 28px;
+
+        }
+
+
+        /* ================= PRODUCT CARD ================= */
+
+        .product-card {
+
+            background: rgba(255,255,255,0.08);
+
+            border: 1px solid rgba(255,255,255,0.13);
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.35);
+
+            transition: 0.35s;
+
+        }
+
+
+        .product-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,0.5);
+
+        }
+
+
+        /* ================= PRODUCT IMAGE ================= */
+
+        .product-card img {
+
+            width: 100%;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        /* ================= PRODUCT INFO ================= */
+
+        .product-info {
+
+            padding: 22px;
+
+        }
+
+
+        .product-info h2 {
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .product-info p {
+
+            color: #ddd;
+
+            margin: 8px 0;
+
+        }
+
+
+        .product-info p:first-of-type {
+
+            color: #ff8bc5;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* ================= REMOVE BUTTON ================= */
+
+        .product-info button {
+
+            margin-top: 15px;
+
+            width: 100%;
+
+            border: none;
+
+            padding: 11px;
+
+            border-radius: 20px;
+
+            color: white;
+
+            background: rgba(255, 70, 120, 0.18);
+
+            border: 1px solid rgba(255,100,150,0.4);
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+
+        .product-info button:hover {
+
+            background: #d93676;
+
+        }
+
+
+        /* ================= TOTAL ================= */
+
+        #cartTotal {
+
+            margin-top: 40px;
+
+            display: flex;
+
+            justify-content: flex-end;
+
+        }
+
+
+        .cart-total {
+
+            width: 360px;
+
+            padding: 25px;
+
+            border-radius: 22px;
+
+            background: rgba(255,255,255,0.08);
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            text-align: center;
+
+        }
+
+
+        .cart-total h2 {
+
+            margin-bottom: 20px;
+
+            font-size: 25px;
+
+        }
+
+
+        .cart-total button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: linear-gradient(
+                135deg,
+                #ec4899,
+                #8b5cf6
+            );
+
+        }
+
+
+        /* ================= EMPTY CART ================= */
+
+        .empty {
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            font-size: 24px;
+
+            color: #d8c9db;
+
+        }
+
+
+        /* ================= TABLET ================= */
+
+        @media(max-width: 900px) {
+
+            .products-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 600px) {
+
+            .cart-header {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+            .products-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .product-card img {
+
+                height: 350px;
+
+            }
+
+            .section-heading h1 {
+
+                font-size: 30px;
+
+            }
+
+            #cartTotal {
+
+                justify-content: center;
+
+            }
+
+            .cart-total {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="cart-header">
+
+        <div class="logo">
+            AURAFIT
+        </div>
+
+        <div class="cart-title">
+            🛒 My Cart
+        </div>
+
+        <a
+            href="home.html"
+            class="continue-btn">
+
+            Continue Shopping
+
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <div class="section-heading">
+
+            <h1>Your Shopping Bag</h1>
+
+            <p>
+                Your selected AuraFit products
+            </p>
+
+        </div>
+
+
+
+        <!-- PRODUCTS -->
+
+        <div
+            id="cartProducts"
+            class="products-grid">
+        </div>
+
+
+
+        <!-- EMPTY -->
+
+        <p
+            id="emptyCart"
+            class="empty">
+
+            Your cart is empty 🛍️
+
+        </p>
+
+
+
+        <!-- TOTAL -->
+
+        <div id="cartTotal"></div>
+
+
+    </main>
+
+
+
+    <!-- ================= JS ================= -->
+
+    <script src="cart-product.js"></script>
+
+
+</body>
+
+</html>

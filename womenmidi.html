@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit - Elegant Midi Dresses</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#fff1f5;
+    color:#6f263b;
+}
+
+header{
+    background:linear-gradient(135deg,#f8d9e2,#f3c4d0);
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#a83252;
+}
+
+nav a{
+    text-decoration:none;
+    color:#6f263b;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+.title{
+    text-align:center;
+    padding:45px 20px 30px;
+}
+
+.title h1{
+    font-size:40px;
+    color:#a83252;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#777;
+    font-size:17px;
+}
+
+.products{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 40px 60px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(168,50,82,.15);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.product-image{
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    display:block;
+}
+
+.heart{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+    color:#a83252;
+
+    font-size:24px;
+    cursor:pointer;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    color:#a83252;
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.product-info p{
+    color:#777;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#222;
+}
+
+.cart-btn{
+    width:calc(100% - 36px);
+    margin:0 18px 18px;
+
+    padding:12px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#a83252;
+    color:white;
+
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.cart-btn:hover{
+    background:#8d2945;
+}
+
+@media(max-width:900px){
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:13px;
+    }
+
+    .title h1{
+        font-size:32px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">AuraFit</div>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="mens.html">Men</a>
+<a href="womens.html">Women</a>
+<a href="kids.html">Kids</a>
+</nav>
+
+</header>
+
+
+<section class="title">
+
+<h1>Elegant Midi Dresses</h1>
+
+<p>Discover elegant and stylish midi dresses at AuraFit</p>
+
+</section>
+
+
+<section class="products">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product">
+
+<a href="product-details.html?category=elegant-midi&product=1"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/elegant-midi-1.jpg"
+alt="Satin Midi Dress">
+
+<button class="heart"
+onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Satin Midi Dress</h3>
+
+<p>Elegant satin midi dress.</p>
+
+<div class="price">₹1199</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Satin Midi Dress')">
+
+ADD TO CART
+
+</button>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product">
+
+<a href="product-details.html?category=elegant-midi&product=2"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/elegant-midi-2.jpg"
+alt="Pleated Midi Dress">
+
+<button class="heart"
+onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Pleated Midi Dress</h3>
+
+<p>Stylish pleated midi dress.</p>
+
+<div class="price">₹1099</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Pleated Midi Dress')">
+
+ADD TO CART
+
+</button>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product">
+
+<a href="product-details.html?category=elegant-midi&product=3"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/elegant-midi-3.jpg"
+alt="Lace Midi Dress">
+
+<button class="heart"
+onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Lace Midi Dress</h3>
+
+<p>Beautiful lace midi dress.</p>
+
+<div class="price">₹1249</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Lace Midi Dress')">
+
+ADD TO CART
+
+</button>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product">
+
+<a href="product-details.html?category=elegant-midi&product=4"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/elegant-midi-4.jpg"
+alt="Wrap Midi Dress">
+
+<button class="heart"
+onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Wrap Midi Dress</h3>
+
+<p>Elegant wrap midi dress.</p>
+
+<div class="price">₹1149</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Wrap Midi Dress')">
+
+ADD TO CART
+
+</button>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product">
+
+<a href="product-details.html?category=elegant-midi&product=5"
+class="product-link">
+
+<div class="product-image">
+
+<img src="images/elegant-midi-5.jpg"
+alt="Floral Midi Dress">
+
+<button class="heart"
+onclick="event.preventDefault();">
+♡
+</button>
+
+</div>
+
+<div class="product-info">
+
+<h3>Floral Midi Dress</h3>
+
+<p>Stylish floral midi dress.</p>
+
+<div class="price">₹1199</div>
+
+</div>
+
+</a>
+
+<button class="cart-btn"
+onclick="addToCart('Floral Midi Dress')">
+
+ADD TO CART
+
+</button>
+
+</div>
+
+
+</section>
+
+
+<script>
+
+function addToCart(productName){
+
+    alert(productName + " added to cart!");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit - Women</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#fff1f5;
+    color:#6f263b;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#f8d9e2,#f3c4d0);
+    padding:18px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#a83252;
+}
+
+nav a{
+    text-decoration:none;
+    color:#6f263b;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:55px 20px 35px;
+}
+
+.hero h1{
+    font-size:45px;
+    color:#a83252;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#777;
+}
+
+/* CATEGORY */
+
+.category-section{
+    padding:30px 50px 60px;
+}
+
+.category-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.category-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(168,50,82,.15);
+
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-6px);
+}
+
+.category-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.category-info{
+    padding:20px;
+    text-align:center;
+}
+
+.category-info h2{
+    color:#a83252;
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.category-info p{
+    color:#777;
+    margin-bottom:18px;
+}
+
+.shop-btn{
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#a83252;
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+
+.shop-btn:hover{
+    background:#8d2945;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    header{
+        padding:15px 20px;
+
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .category-section{
+        padding:25px 20px 50px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+AuraFit
+</div>
+
+<nav>
+
+<a href="home.html">Home</a>
+
+<a href="mens.html">Men</a>
+
+<a href="womens.html">Women</a>
+
+<a href="kids.html">Kids</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Women's Collection</h1>
+
+<p>Explore the latest styles at AuraFit</p>
+
+</section>
+
+
+
+<!-- WOMEN CATEGORIES -->
+
+<section class="category-section">
+
+<div class="category-grid">
+
+
+
+<!-- 1 FLORAL DRESSES -->
+
+<div class="category-card">
+
+<img src="images/wom1.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Floral Dresses</h2>
+
+<p>Beautiful floral dresses for every occasion.</p>
+
+<a href="women-dress.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 3 PARTY WEAR -->
+
+<div class="category-card">
+
+<img src="images/wom3.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Party Wear Dresses</h2>
+
+<p>Stylish dresses for special occasions.</p>
+
+<a href="womenpartywear.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- 4 FLORAL KURTI -->
+
+<div class="category-card">
+
+<img src="images/wom4.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Floral Kurtis</h2>
+
+<p>Beautiful floral kurtis for everyday style.</p>
+
+<a href="womenfloralkurti.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- 5 PRINTED KURTI -->
+
+<div class="category-card">
+
+<img src="images/wom5.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Printed Kurtis</h2>
+
+<p>Trendy printed kurtis with unique designs.</p>
+
+<a href="womenprintedkurti.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- 6 COTTON KURTI -->
+
+<div class="category-card">
+
+<img src="images/wom6.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Cotton Kurtis</h2>
+
+<p>Comfortable cotton kurtis for daily wear.</p>
+
+<a href="womencottonkurti.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- 7 BASIC TOPS -->
+
+<div class="category-card">
+
+<img src="images/wom7.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Basic Casual Tops</h2>
+
+<p>Simple and comfortable everyday tops.</p>
+
+<a href="womenbasictop.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- 8 FLORAL TOPS -->
+
+<div class="category-card">
+
+<img src="images/wom8.jpg.jpg">
+
+<div class="category-info">
+
+<h2>Floral Tops</h2>
+
+<p>Fresh floral tops with stylish designs.</p>
+
+<a href="womenfloraltop.html"
+class="shop-btn">
+
+SHOP NOW
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraFit | Festive Collection</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff7ed;
+  color: #492431;
+}
+
+/* FESTIVE HERO */
+
+.festival-hero {
+  min-height: 620px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+
+  background:
+    linear-gradient(
+      rgba(44, 12, 26, 0.67),
+      rgba(48, 15, 29, 0.83)
+    ),
+    url("images/festival-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: #fff1d1;
+}
+
+.festival-hero::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px solid #e9c77b88;
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: #f5d18a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.hero-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 8vw, 90px);
+  line-height: 1.05;
+  margin: 25px 0;
+}
+
+.hero-content h1 span {
+  color: #f3c778;
+  font-style: italic;
+}
+
+.hero-content p {
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.8;
+  color: #f8e5d6;
+  font-size: 15px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 15px 30px;
+  background: #eac477;
+  color: #421d2b;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #fff0cb;
+  transform: translateY(-4px);
+}
+
+.festive-decor {
+  position: absolute;
+  color: #f5d58b;
+  opacity: 0.65;
+  animation: floatDecor 4s ease-in-out infinite;
+}
+
+.decor-one {
+  top: 20%;
+  left: 8%;
+  font-size: 75px;
+}
+
+.decor-two {
+  bottom: 20%;
+  right: 9%;
+  font-size: 95px;
+  animation-delay: 1s;
+}
+
+@keyframes floatDecor {
+  50% {
+    transform: translateY(-18px) rotate(15deg);
+  }
+}
+
+.festival-tags {
+  position: absolute;
+  bottom: 35px;
+  display: flex;
+  gap: 25px;
+  color: #f2d49b;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* COLLECTION */
+
+.festival-collection {
+  padding: 85px 6%;
+
+  background:
+    linear-gradient(
+      rgba(255, 248, 235, 0.92),
+      rgba(255, 241, 222, 0.94)
+    ),
+    url("images/festival-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading span {
+  color: #a16e36;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 60px);
+  color: #62283b;
+  margin: 14px 0;
+}
+
+.section-heading h2 i {
+  color: #b78a42;
+}
+
+.section-heading p {
+  color: #8c7069;
+  font-size: 14px;
+}
+
+/* PRODUCT GRID */
+
+.festival-grid {
+  max-width: 1350px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.festival-card {
+  background: #fffdf8;
+  border: 1px solid #e7d2aa;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(87, 44, 27, 0.12);
+  transition: 0.4s;
+}
+
+.festival-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 20px 40px rgba(87, 44, 27, 0.2);
+}
+
+.product-image {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  background: #ead9ca;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s;
+}
+
+.festival-card:hover .product-image img {
+  transform: scale(1.07);
+}
+
+.product-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #fff1d8;
+  color: #75402d;
+  padding: 8px 12px;
+  border-radius: 25px;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.product-info {
+  padding: 23px;
+}
+
+.category {
+  color: #a47b44;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.product-info h3 {
+  font-family: Georgia, serif;
+  color: #542a38;
+  font-size: 23px;
+  margin: 11px 0;
+}
+
+.product-info p {
+  color: #907d77;
+  font-size: 13px;
+}
+
+.price {
+  color: #702c43;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 17px 0;
+}
+
+.product-info a {
+  display: inline-block;
+  background: #642a40;
+  color: #fff5e4;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.product-info a:hover {
+  background: #a4773e;
+}
+
+/* FESTIVE OFFER */
+
+.festival-offer {
+  margin: 75px 6%;
+  padding: 55px 25px;
+  text-align: center;
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      rgba(54, 16, 32, 0.72),
+      rgba(54, 16, 32, 0.82)
+    ),
+    url("images/festival-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: #fff0d3;
+  border: 1px solid #c69c55;
+}
+
+.festival-offer span {
+  color: #edca83;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.festival-offer h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 55px);
+  margin: 17px 0;
+}
+
+.festival-offer h2 strong {
+  color: #f4cb78;
+}
+
+.festival-offer p {
+  color: #f1dfcf;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+.festive-bottom {
+  text-align: center;
+  padding: 65px 20px;
+  background: #361523;
+  color: #fff0d5;
+}
+
+.festive-bottom span {
+  color: #e6bd76;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.festive-bottom h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 55px);
+  margin: 20px 0;
+}
+
+.festive-bottom p {
+  color: #e7d0c5;
+  font-size: 14px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .festival-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .festival-hero {
+    min-height: 550px;
+  }
+
+  .festival-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 400px;
+  }
+
+  .festival-collection {
+    padding: 60px 18px;
+    background-attachment: scroll;
+  }
+
+  .festival-tags {
+    gap: 12px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .decor-one {
+    left: 2%;
+  }
+
+  .decor-two {
+    right: 2%;
+  }
+
+  .festival-offer {
+    margin: 45px 18px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="festival-hero">
+
+  <div class="festive-decor decor-one">✦</div>
+  <div class="festive-decor decor-two">✧</div>
+
+  <div class="hero-content">
+
+    <span class="eyebrow">
+      AURAFIT FESTIVE EDITION
+    </span>
+
+    <h1>
+      Celebrate<br>
+      <span>Every Moment</span>
+    </h1>
+
+    <p>
+      From traditional celebrations to modern festive vibes,
+      discover outfits made for your special moments.
+    </p>
+
+    <a href="#collection" class="hero-btn">
+      EXPLORE COLLECTION ↓
+    </a>
+
+  </div>
+
+  <div class="festival-tags">
+    <span>GANPATI</span>
+    <span>NAVRATRI</span>
+    <span>DIWALI</span>
+  </div>
+
+</section>
+
+
+<!-- SIX PRODUCTS -->
+
+<section class="festival-collection" id="collection">
+
+  <div class="section-heading">
+
+    <span>THE FESTIVE WARDROBE</span>
+
+    <h2>Festive Fits ✨</h2>
+
+    <p>
+      Six special picks for your celebration moments.
+    </p>
+
+  </div>
+
+  <div class="festival-grid">
+
+    <!-- WOMEN 1 -->
+
+    <div class="festival-card">
+
+      <div class="product-image">
+        <img src="images/festive1.jpg"
+             alt="Royal Bloom Kurta">
+
+        <span class="product-tag">FESTIVE PICK</span>
+      </div>
+
+      <div class="product-info">
+
+        <span class="category">WOMEN • ETHNIC</span>
+
+        <h3>Royal Bloom Kurta</h3>
+
+        <p>Elegant festive wear</p>
+
+        <div class="price">₹899</div>
+
+        <a href="womenprintedkurti.html">
+          VIEW PRODUCT ↗
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- MEN 1 -->
+
+    <div class="festival-card">
+
+      <div class="product-image">
+        <img src="images/festive2.jpg"
+             alt="Royal Heritage Kurta">
+
+        <span class="product-tag">BESTSELLER</span>
+      </div>
+
+      <div class="product-info">
+
+        <span class="category">MEN • ETHNIC</span>
+
+        <h3>Royal Heritage Kurta</h3>
+
+        <p>Classic celebration style</p>
+
+        <div class="price">₹999</div>
+
+        <a href="kurta-pajama.html">
+          VIEW PRODUCT ↗
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- KIDS 1 -->
+
+    <div class="festival-card">
+
+      <div class="product-image">
+        <img src="images/festive3.jpg"
+             alt="Little Princess Lehenga">
+
+        <span class="product-tag">LITTLE AURA</span>
+      </div>
+
+      <div class="product-info">
+
+        <span class="category">KIDS • GIRLS</span>
+
+        <h3>Little Princess Lehenga</h3>
+
+        <p>Little looks, big celebrations</p>
+
+        <div class="price">₹699</div>
+
+        <a href="kids-product-detail.html">
+          VIEW PRODUCT ↗
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- WOMEN 2 -->
+
+    <div class="festival-card">
+
+      <div class="product-image">
+        <img src="images/festive4.jpg"
+             alt="Festive Glow Anarkali">
+
+        <span class="product-tag">NEW DROP</span>
+      </div>
+
+      <div class="product-info">
+
+        <span class="category">WOMEN • ETHNIC</span>
+
+        <h3>Festive Glow Anarkali</h3>
+
+        <p>Made for special moments</p>
+
+        <div class="price">₹1,199</div>
+
+        <a href="womenfloralkurti.html">
+          VIEW PRODUCT ↗
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- KIDS 2 -->
+
+    <div class="festival-card">
+
+      <div class="product-image">
+        <img src="images/festive5.jpg"
+             alt="Little Gentleman Set">
+
+        <span class="product-tag">LITTLE AURA</span>
+      </div>
+
+      <div class="product-info">
+
+        <span class="category">KIDS • BOYS</span>
+
+        <h3>Little Gentleman Set</h3>
+
+        <p>Smart festive little looks</p>
+
+        <div class="price">₹749</div>
+
+        <a href="baby-rompar.html">
+          VIEW PRODUCT ↗
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- MEN 2 -->
+
+    <div class="festival-card">
+
+      <div class="product-image">
+        <img src="images/festive6.jpg"
+             alt="Midnight Celebration Set">
+
+        <span class="product-tag">AURA EXCLUSIVE</span>
+      </div>
+
+      <div class="product-info">
+
+        <span class="category">MEN • FUSION</span>
+
+        <h3>Midnight Celebration Set</h3>
+
+        <p>Tradition meets modern style</p>
+
+        <div class="price">₹1,299</div>
+
+        <a href="kurta.html">
+          VIEW PRODUCT ↗
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FESTIVE OFFER BANNER -->
+
+<section class="festival-offer">
+
+  <span>CELEBRATE WITH AURAFIT</span>
+
+  <h2>
+    Festive Special<br>
+    <strong>UP TO 40% OFF</strong>
+  </h2>
+
+  <p>
+    Your favourite festive styles at special prices.
+  </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<section class="festive-bottom">
+
+  <span>WITH LOVE, AURAFIT</span>
+
+  <h2>
+    Make Every Celebration<br>
+    Feel Like You.
+  </h2>
+
+  <p>
+    Tradition in your heart. Style in your aura.
+  </p>
+
+</section>
+
+</body>
+</html>

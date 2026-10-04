@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Formal Shirts | AuraFit</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #222;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            width: 100%;
+            padding: 20px 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+
+            border-bottom: 1px solid #eee;
+
+            background: white;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #7d459b;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .collection-header {
+            text-align: center;
+
+            padding: 70px 20px 50px;
+
+            background: #faf6fb;
+        }
+
+        .collection-header p {
+            color: #8b4bb3;
+
+            letter-spacing: 4px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+        .collection-header h1 {
+            font-size: 48px;
+
+            letter-spacing: 3px;
+
+            margin: 15px 0;
+        }
+
+        .collection-header span {
+            color: #777;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .casual-products {
+            width: 100%;
+
+            padding: 60px 6%;
+        }
+
+        .casual-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 30px;
+
+            width: 100%;
+        }
+
+
+        /* =========================
+           PRODUCT CARD
+        ========================= */
+
+        .product-link {
+
+            text-decoration: none;
+
+            color: inherit;
+
+            display: block;
+        }
+
+        .casual-product {
+
+            width: 100%;
+
+            background: white;
+
+            transition: 0.3s;
+        }
+
+        .casual-product:hover {
+
+            transform: translateY(-5px);
+        }
+
+
+        /* =========================
+           PRODUCT IMAGE
+        ========================= */
+
+        .product-image {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 350px;
+
+            overflow: hidden;
+
+            background: #f5f5f5;
+        }
+
+        .product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* =========================
+           HEART
+        ========================= */
+
+        .heart {
+
+            position: absolute;
+
+            right: 15px;
+
+            top: 15px;
+
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            font-size: 24px;
+
+            cursor: pointer;
+
+            z-index: 5;
+        }
+
+        .heart:hover {
+
+            color: #7d459b;
+        }
+
+
+        /* =========================
+           PRODUCT DETAILS
+        ========================= */
+
+        .product-details {
+
+            padding: 18px 5px 25px;
+        }
+
+        .product-details h3 {
+
+            font-size: 19px;
+
+            margin: 0 0 8px;
+        }
+
+        .product-details p {
+
+            color: #777;
+
+            font-size: 14px;
+
+            margin: 0 0 12px;
+        }
+
+        .product-details h4 {
+
+            font-size: 19px;
+
+            margin: 12px 0;
+        }
+
+
+        /* =========================
+           CART BUTTON
+        ========================= */
+
+        .cart-btn {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            background: #7d459b;
+
+            color: white;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            cursor: pointer;
+        }
+
+        .cart-btn:hover {
+
+            background: #542d6d;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .casual-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+
+                gap: 15px;
+
+                padding: 15px;
+
+                flex-wrap: wrap;
+            }
+
+            .collection-header h1 {
+
+                font-size: 35px;
+            }
+
+            .casual-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+    <a href="home.html">
+        HOME
+    </a>
+
+    <a href="about.html">
+        ABOUT
+    </a>
+
+    <a href="mens.html">
+        MEN
+    </a>
+
+    <a href="womens.html">
+        WOMEN
+    </a>
+
+    <a href="kids.html">
+        KIDS
+    </a>
+
+    <a href="aurapicks.html">
+        AURA PICKS
+    </a>
+
+    <a href="style-studio.html">
+        STYLE STUDIO
+    </a>
+
+</nav>
+
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="collection-header">
+
+    <p>
+        AURAFIT MEN
+    </p>
+
+    <h1>
+        FORMAL SHIRTS
+    </h1>
+
+    <span>
+        Smart and sophisticated shirts for every occasion
+    </span>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="casual-products">
+
+    <div class="casual-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <a href="product-details.html?category=formal-shirt&product=1"
+           class="product-link">
+
+            <div class="casual-product">
+
+                <div class="product-image">
+
+                    <img src="images/formal1.jpg.jpg"
+                         alt="Classic Formal Shirt">
+
+                    <button class="heart"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>
+                        Classic Formal Shirt
+                    </h3>
+
+                    <p>
+                        Regular Fit • Cotton
+                    </p>
+
+                    <h4>
+                        ₹899
+                    </h4>
+
+                    <button class="cart-btn"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <a href="product-details.html?category=formal-shirt&product=2"
+           class="product-link">
+
+            <div class="casual-product">
+
+                <div class="product-image">
+
+                    <img src="images/formal2.jpg.jpg"
+                         alt="Slim Fit Formal Shirt">
+
+                    <button class="heart"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>
+                        Slim Fit Formal Shirt
+                    </h3>
+
+                    <p>
+                        Slim Fit • Premium Cotton
+                    </p>
+
+                    <h4>
+                        ₹999
+                    </h4>
+
+                    <button class="cart-btn"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <a href="product-details.html?category=formal-shirt&product=3"
+           class="product-link">
+
+            <div class="casual-product">
+
+                <div class="product-image">
+
+                    <img src="images/formal3.jpg.jpg"
+                         alt="Premium Formal Shirt">
+
+                    <button class="heart"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>
+                        Premium Formal Shirt
+                    </h3>
+
+                    <p>
+                        Regular Fit • Premium Fabric
+                    </p>
+
+                    <h4>
+                        ₹1099
+                    </h4>
+
+                    <button class="cart-btn"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <a href="product-details.html?category=formal-shirt&product=4"
+           class="product-link">
+
+            <div class="casual-product">
+
+                <div class="product-image">
+
+                    <img src="images/formal4.jpg.jpg"
+                         alt="Office Formal Shirt">
+
+                    <button class="heart"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>
+                        Office Formal Shirt
+                    </h3>
+
+                    <p>
+                        Regular Fit • Easy Care
+                    </p>
+
+                    <h4>
+                        ₹949
+                    </h4>
+
+                    <button class="cart-btn"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <a href="product-details.html?category=formal-shirt&product=5"
+           class="product-link">
+
+            <div class="casual-product">
+
+                <div class="product-image">
+
+                    <img src="images/formal5.jpg.jpg"
+                         alt="Business Formal Shirt">
+
+                    <button class="heart"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>
+                        Business Formal Shirt
+                    </h3>
+
+                    <p>
+                        Classic Fit • Cotton
+                    </p>
+
+                    <h4>
+                        ₹1199
+                    </h4>
+
+                    <button class="cart-btn"
+                            onclick="event.preventDefault(); event.stopPropagation();">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+</section>
+       
+                
+
+</body>
+
+</html>

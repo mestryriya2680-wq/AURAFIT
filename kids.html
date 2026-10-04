@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraFit | Kids Collection</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Trebuchet MS',sans-serif;
+background:linear-gradient(135deg,#fff1f7,#e9faff,#fff6d9);
+color:#49384f;
+min-height:100vh;
+}
+
+header{
+background:rgba(255,255,255,.92);
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+box-shadow:0 5px 20px #d7bcd255;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo{font-size:28px;font-weight:bold;color:#db6b9c}
+
+nav a{
+text-decoration:none;
+color:#49384f;
+font-weight:bold;
+margin:0 10px;
+}
+
+nav a:hover{color:#df6a9f}
+
+.cart-btn{
+background:#db6b9c;
+color:white;
+border:0;
+padding:11px 17px;
+border-radius:25px;
+cursor:pointer;
+}
+
+.hero{
+margin:25px auto;
+width:90%;
+min-height:270px;
+border-radius:30px;
+background:
+radial-gradient(circle at 15% 20%,#fff 0 5px,transparent 6px),
+radial-gradient(circle at 80% 30%,#fff 0 7px,transparent 8px),
+linear-gradient(120deg,#f9b9d5,#bdeeff,#fff0a9);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+box-shadow:0 15px 35px #b9a2b744;
+}
+
+.hero h1{font-size:clamp(32px,6vw,58px);color:#784c79}
+.hero p{margin:12px 0;font-size:17px}
+.hero span{font-size:35px}
+
+.section{
+padding:25px 6%;
+}
+
+.section h2{
+text-align:center;
+font-size:30px;
+margin-bottom:10px;
+color:#a95783;
+}
+
+.subtitle{text-align:center;margin-bottom:25px;color:#806b83}
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+border-radius:22px;
+padding:14px;
+box-shadow:0 8px 25px #bda7b633;
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{transform:translateY(-7px)}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:17px;
+cursor:pointer;
+background:#fff0f6;
+}
+
+.card h3{margin:13px 0 7px}
+.price{font-weight:bold;color:#d35d94;font-size:19px}
+
+.actions{
+display:flex;
+gap:8px;
+margin-top:12px;
+}
+
+button{
+border:0;
+cursor:pointer;
+font-weight:bold;
+}
+
+.add{
+background:#f9d7e8;
+color:#8c4169;
+padding:11px;
+border-radius:12px;
+flex:1;
+}
+
+.buy{
+background:#d96d9e;
+color:white;
+padding:11px;
+border-radius:12px;
+flex:1;
+}
+
+.details{
+background:#dff4ff;
+color:#426a83;
+padding:10px;
+border-radius:12px;
+width:100%;
+margin-top:8px;
+}
+
+.page{
+width:90%;
+max-width:850px;
+margin:35px auto;
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 35px #a88aab33;
+}
+
+.detail-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+align-items:center;
+}
+
+.detail-layout img{
+width:100%;
+max-height:430px;
+object-fit:cover;
+border-radius:20px;
+}
+
+select,input{
+padding:12px;
+border:1px solid #e6c9da;
+border-radius:10px;
+margin:10px 0;
+width:100%;
+background:#fffafd;
+}
+
+.primary{
+background:#d96d9e;
+color:white;
+padding:13px 20px;
+border-radius:12px;
+margin:5px;
+}
+
+.secondary{
+background:#e9f6ff;
+color:#466b83;
+padding:13px 20px;
+border-radius:12px;
+margin:5px;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+padding:15px 0;
+border-bottom:1px solid #eee;
+flex-wrap:wrap;
+}
+
+.cart-item img{
+width:75px;height:85px;object-fit:cover;border-radius:10px;
+}
+
+footer{
+background:#f8d9e9;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+@media(max-width:750px){
+.products{grid-template-columns:repeat(2,minmax(0,1fr))}
+.detail-layout{grid-template-columns:1fr}
+.hero{min-height:220px}
+.card img{height:190px}
+}
+
+@media(max-width:480px){
+.products{grid-template-columns:1fr}
+header{justify-content:center}
+nav{text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">✿ AuraFit Kids</div>
+<nav>
+<a href="home.html">Home</a>
+<a href="#girls">Girls</a>
+<a href="#boys">Boys</a>
+<a href="#babies">Babies</a>
+</nav>
+<button class="cart-btn" onclick="go('cart')">
+🛒 Cart (<span id="cartCount">0</span>)
+</button>
+</header>
+
+<main id="app"></main>
+
+<footer>
+<h3>✿ AuraFit Kids ✿</h3>
+<p>Little Styles, Big Smiles!</p>
+<p>© 2026 AuraFit Fashion Studio</p>
+</footer>
+
+<script>
+const products=[
+{id:1,name:"Pretty Princess Dress",category:"girls",price:899,img:"images/kid1.jpg.jpg",desc:"A cute party dress for little celebrations."},
+{id:2,name:"Floral Frock",category:"girls",price:749,img:"images/kid2.jpg.jpg",desc:"A cheerful floral frock for everyday outings."},
+{id:3,name:"Rainbow Party Dress",category:"girls",price:999,img:"images/kid3.jpg.jpg",desc:"A colorful occasion-wear style."},
+{id:4,name:"Cute Cotton Dress",category:"girls",price:599,img:"images/kid4.jpg.jpg",desc:"Soft cotton style for comfortable days."},
+{id:5,name:"Little Star Outfit",category:"girls",price:799,img:"images/kid5.jpg.jpg",desc:"A sweet outfit for special moments."},
+
+{id:6,name:"Cool Boy Shirt",category:"boys",price:649,img:"images/kid6.jpg.jpg",desc:"A smart casual shirt for little explorers."},
+{id:7,name:"Mini Denim Set",category:"boys",price:899,img:"images/kid7.jpg.jpg",desc:"A playful denim-inspired outfit."},
+{id:8,name:"Little Champ T-Shirt",category:"boys",price:499,img:"images/kid8.jpg.jpg",desc:"A relaxed T-shirt for everyday fun."},
+{id:9,name:"Adventure Kurta",category:"boys",price:799,img:"images/kid9.jpg.jpg",desc:"A festive traditional look."},
+{id:10,name:"Smart Party Set",category:"boys",price:1099,img:"images/kid10.jpg.jpg",desc:"A coordinated outfit for celebrations."},
+
+{id:11,name:"Baby Rainbow Romper",category:"babies",price:499,img:"images/kid11.jpg.jpg",desc:"A cute romper for little ones."},
+{id:12,name:"Teddy Bear Onesie",category:"babies",price:599,img:"images/kis12.jpg.jpg",desc:"A cozy everyday baby outfit."},
+{id:13,name:"Little Sunshine Set",category:"babies",price:699,img:"images/kid13.jpg.jpg",desc:"A cheerful matching baby set."},
+{id:14,name:"Cloud Soft Romper",category:"babies",price:549,img:"images/kid14.jpg.jpg",desc:"A soft and comfortable romper."},
+{id:15,name:"Baby Bunny Suit",category:"babies",price:749,img:"images/kid15.jpg.jpg",desc:"A lovely outfit for tiny adventures."}
+];
+
+let cart=JSON.parse(localStorage.getItem("auraKidsCart")||"[]");
+
+function save(){
+localStorage.setItem("auraKidsCart",JSON.stringify(cart));
+document.getElementById("cartCount").textContent=
+cart.reduce((sum,item)=>sum+item.qty,0);
+}
+
+function go(view,id){
+if(view==="details") location.href="kids.html?view=details&id="+id;
+else location.href="kids.html?view="+view;
+}
+
+function add(id){
+let item=cart.find(x=>x.id===id);
+if(item)item.qty++;
+else cart.push({id,qty:1});
+save();
+alert("Product added to cart! 🛍️");
+}
+
+function card(p){
+return `
+<div class="card">
+<img src="${p.img}" alt="${p.name}" onclick="go('details',${p.id})">
+<h3>${p.name}</h3>
+<p class="price">₹${p.price}</p>
+<div class="actions">
+<button class="add" onclick="add(${p.id})">＋ Add to Cart</button>
+<button class="buy" onclick="go('details',${p.id})">Buy Now</button>
+</div>
+<button class="details" onclick="go('details',${p.id})">View Details</button>
+</div>`;
+}
+
+function section(title,category,id){
+let list=products.filter(p=>p.category===category);
+return `
+<section class="section" id="${id}">
+<h2>${title}</h2>
+<p class="subtitle">Cute styles for every little personality ✨</p>
+<div class="products">${list.map(card).join("")}</div>
+</section>`;
+}
+
+function home(){
+return `
+<section class="hero">
+<div>
+<span>🧸 🎀 🌈 ⭐</span>
+<h1>Little Styles, Big Smiles!</h1>
+<p>Discover adorable fashion for Girls, Boys & Babies.</p>
+<p>✨ Playful Looks • Happy Little Moments ✨</p>
+</div>
+</section>
+${section("🎀 Girls Collection","girls","girls")}
+${section("🧢 Boys Collection","boys","boys")}
+${section("🍼 Baby Collection","babies","babies")}
+`;
+}
+
+function details(){
+let id=Number(new URLSearchParams(location.search).get("id"));
+let p=products.find(x=>x.id===id);
+if(!p)return "<div class='page'><h2>Product not found</h2><button class='primary' onclick='go(\"home\")'>Back</button></div>";
+
+return `
+<div class="page">
+<button class="secondary" onclick="go('home')">← Back to Kids</button>
+<div class="detail-layout">
+<img src="${p.img}" alt="${p.name}">
+<div>
+<h1>${p.name}</h1>
+<h2 class="price">₹${p.price}</h2>
+<p>${p.desc}</p>
+<p>✨ Comfortable kids fashion</p>
+<p>🚚 Delivery details shown at checkout</p>
+<p>↩️ Return requests subject to store policy</p>
+<label>Select Size</label>
+<select id="size">
+<option value="">Choose Size</option>
+<option>0-6 Months</option>
+<option>6-12 Months</option>
+<option>1-2 Years</option>
+<option>2-3 Years</option>
+<option>3-4 Years</option>
+<option>4-5 Years</option>
+<option>5-6 Years</option>
+<option>7-8 Years</option>
+<option>9-10 Years</option>
+</select>
+<label>Quantity</label>
+<input id="qty" type="number" min="1" max="10" value="1">
+<button class="primary" onclick="addDetail(${p.id})">＋ Add to Cart</button>
+<button class="primary" onclick="buyNow(${p.id})">Buy Now</button>
+</div>
+</div>
+</div>`;
+}
+
+function addDetail(id){
+let size=document.getElementById("size").value;
+let qty=Number(document.getElementById("qty").value);
+if(!size){alert("Please select a size");return}
+if(!Number.isInteger(qty)||qty<1||qty>10){alert("Select quantity from 1 to 10");return}
+let item=cart.find(x=>x.id===id&&x.size===size);
+if(item)item.qty+=qty;
+else cart.push({id,qty,size});
+save();
+alert("Added to cart successfully!");
+}
+
+function buyNow(id){
+let size=document.getElementById("size").value;
+let qty=Number(document.getElementById("qty").value);
+if(!size){alert("Please select a size");return}
+if(!Number.isInteger(qty)||qty<1||qty>10){alert("Enter valid quantity");return}
+cart=[{id,qty,size}];
+save();
+go("payment");
+}
+
+function cartPage(){
+let total=0;
+let html=cart.map((item,i)=>{
+let p=products.find(x=>x.id===item.id);
+let sum=p.price*item.qty;
+total+=sum;
+return `
+<div class="cart-item">
+<img src="${p.img}">
+<div>
+<h3>${p.name}</h3>
+<p>Size: ${item.size||"Select at checkout"}</p>
+<p>₹${p.price} × ${item.qty} = ₹${sum}</p>
+</div>
+<button class="secondary" onclick="removeItem(${i})">Remove</button>
+</div>`;
+}).join("");
+
+return `
+<div class="page">
+<h1>🛒 Your Shopping Cart</h1>
+${html||"<p>Your cart is empty.</p>"}
+<h2>Total: ₹${total}</h2>
+<button class="primary" onclick="go('home')">Continue Shopping</button>
+${cart.length?`<button class="primary" onclick="go('payment')">Proceed to Payment</button>`:""}
+</div>`;
+}
+
+function removeItem(i){
+cart.splice(i,1);save();render();
+}
+
+function payment(){
+let total=cart.reduce((s,item)=>{
+let p=products.find(x=>x.id===item.id);
+return s+p.price*item.qty;
+},0);
+
+if(!cart.length)return cartPage();
+
+return `
+<div class="page">
+<h1>💳 Checkout & Payment</h1>
+<h2>Total Amount: ₹${total}</h2>
+<form onsubmit="placeOrder(event)">
+<label>Full Name</label>
+<input id="customer" required placeholder="Enter full name">
+<label>Mobile Number</label>
+<input id="phone" type="tel" pattern="[0-9]{10}" required placeholder="10 digit mobile number">
+<label>Delivery Address</label>
+<textarea id="address" required placeholder="House no, street, city, pincode" style="width:100%;height:90px;padding:12px;border:1px solid #e6c9da;border-radius:10px"></textarea>
+<label>Payment Method</label>
+<select id="method" required>
+<option value="">Select Payment Method</option>
+<option>UPI</option>
+<option>Credit / Debit Card</option>
+<option>Cash on Delivery</option>
+</select>
+<div id="payFields"></div>
+<button class="primary" type="submit">Place Order</button>
+</form>
+</div>`;
+}
+
+function placeOrder(e){
+e.preventDefault();
+let method=document.getElementById("method").value;
+if(!method){alert("Please select payment method");return}
+if(method!=="Cash on Delivery"){
+alert("Demo checkout: No real payment will be charged.");
+}
+let order={
+number:"AFK"+Date.now(),
+name:document.getElementById("customer").value,
+phone:document.getElementById("phone").value,
+address:document.getElementById("address").value,
+method,
+items:cart,
+date:new Date().toLocaleDateString()
+};
+localStorage.setItem("auraKidsOrder",JSON.stringify(order));
+cart=[];
+save();
+go("success");
+}
+
+function success(){
+let order=JSON.parse(localStorage.getItem("auraKidsOrder")||"{}");
+return `
+<div class="page" style="text-align:center;padding:50px 20px">
+<div style="font-size:75px">🎉🧸</div>
+<h1 style="color:#d45e94">Order Placed Successfully!</h1>
+<p>Thank you, ${order.name||"Customer"}!</p>
+<p>Your little one's fashion goodies are in the order list.</p>
+<h3>Order ID: ${order.number||"—"}</h3>
+<p>Payment: ${order.method||"—"}</p>
+<p>Order Date: ${order.date||"—"}</p>
+<button class="primary" onclick="go('home')">Continue Shopping</button>
+</div>`;
+}
+
+function render(){
+save();
+let view=new URLSearchParams(location.search).get("view")||"home";
+let app=document.getElementById("app");
+
+if(view==="details")app.innerHTML=details();
+else if(view==="cart")app.innerHTML=cartPage();
+else if(view==="payment")app.innerHTML=payment();
+else if(view==="success")app.innerHTML=success();
+else app.innerHTML=home();
+}
+
+render();
+</script>
+</body>
+</html>
